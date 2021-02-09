@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="zxx" class="js">
+
+<head>
+    <base href="../">
+    <meta charset="utf-8">
+    <meta name="author" content="Softnio">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description"
+        content="A powerful and conceptual apps base dashboard template that especially build for developers and programmers.">
+    <!-- Fav Icon  -->
+
+    <!-- VUE CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <!-- AXIOS CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="./images/favicon.png">
+    <!-- Page Title  -->
+    <title>Register | DashLite Admin Template</title>
+    <!-- StyleSheets  -->
+    <link rel="stylesheet" href="./assets/css/dashlite.css?ver=1.9.2">
+    <link id="skin-default" rel="stylesheet" href="./assets/css/theme.css?ver=1.9.2">
+
+</head>
+
+<body class="nk-body bg-white npc-default pg-auth">
+    <div class="nk-app-root">
+
+        <!-- main @s -->
+        <div class="nk-main " id="app-vue">
+            <!-- wrap @s -->
+            <div class="nk-wrap nk-wrap-nosidebar">
+                <!-- content @s -->
+                <div class="nk-content ">
+                    <div class="nk-block nk-block-middle nk-auth-body wide-xs">
+                        <div class="brand-logo pb-4 text-center">
+                            <a href="html/index.html" class="logo-link">
+                                <img class="logo-light logo-img logo-img-lg" src="./images/logo.png"
+                                    srcset="./images/logo2x.png 2x" alt="logo">
+                                <img class="logo-dark logo-img logo-img-lg" src="./images/logo-dark.png"
+                                    srcset="./images/logo-dark2x.png 2x" alt="logo-dark">
+                            </a>
+                        </div>
+                        <div class="card">
+                            <div class="card-inner card-inner-lg">
+                                <div class="nk-block-head">
+                                    <div class="nk-block-head-content">
+                                        <h4 class="nk-block-title">Sign up</h4>
+                                        <div class="nk-block-des">
+                                            <p>Sign up to create your business account.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <form action="success.html" @submit.prevent="handleSubmit">
+                                    <div class="form-group">
+                                        <label class="form-label" for="name" >Company Name</label>
+                                        <input type="text" class="form-control form-control-lg" v-model="company_name" id="name"
+                                            placeholder="Enter your company name" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label" for="email" >Work email</label>
+                                        <input type="text" class="form-control form-control-lg" id="email" v-model="email"
+                                            placeholder="Enter your work email address" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="custom-control custom-control-xs custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="checkbox" required>
+                                            <label class="custom-control-label" for="checkbox">I agree to Swiftend <a
+                                                    href="#">Privacy Policy</a> &amp; <a href="#"> Terms.</a></label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <button class="btn btn-lg btn-primary btn-block" type="submit">Register</button>
+                                    </div>
+                                </form>
+                                <div class="form-note-s2 text-center pt-4"> Already have an account? <a
+                                        href="./html/login.html"><strong>Sign in instead</strong></a>
+                                </div>
+                                <div class="text-center pt-4 pb-3">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="nk-footer nk-auth-footer-full">
+                        <div class="container wide-lg">
+                            <div class="row g-3">
+                                <div class="col-lg-6 order-lg-last">
+                                    <ul class="nav nav-sm justify-content-center justify-content-lg-end">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">Terms & Condition</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">Privacy Policy</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">Help</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="nk-block-content text-center text-lg-left">
+                                        <p class="text-soft">&copy; 2020 Swiftend. All Rights Reserved.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- wrap @e -->
+            </div>
+            <!-- content @e -->
+        </div>
+        <!-- main @e -->
+    </div>
+    <!-- app-root @e -->
+    <!-- JavaScript -->
+
+    <!-- VUE INSTANCE -->
+    <script>
+        const vueApp = new Vue({
+            el: '#app-vue',
+            data(){
+                return{
+                    company_name: '',
+                    email: '',
+                }
+                },
+                methods: {
+                  handleSubmit() {
+                      const data = {
+                        company_name: this.company_name,
+                        email: this.email,
+                      }
+                      console.log(data)
+                      window.location.href = "./html/login.html"
+                  }
+                    // async handleSubmit(){
+                    // await axios.post('SignUp',  {
+                    //     company_name: this.company_name,
+                    //     email: this.email,
+                    // });
+                    
+                    // }
+                }
+        })
+    </script>
+    <!-- VUE INSTANCE -->
+
+<script src="./assets/js/bundle.js?ver=1.9.2"></script>
+<script src="./assets/js/scripts.js?ver=1.9.2"></script>
+</body>
+</html>
