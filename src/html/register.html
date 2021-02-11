@@ -126,22 +126,23 @@
                 }
                 },
                 methods: {
-                  handleSubmit() {
-                      const data = {
+                    async handleSubmit(){
+                        try{
+                    await axios.post('https://powerful-wave-30297.herokuapp.com/api/signup',  {
                         company_name: this.company_name,
                         email: this.email,
-                      }
-                      console.log(data)
-                      window.location.href = "./html/login.html"
-                  }
-                    // async handleSubmit(){
-                    // await axios.post('SignUp',  {
-                    //     company_name: this.company_name,
-                    //     email: this.email,
-                    // });
+                    });
+                    window.location.replace("./html/success.html");
                     
-                    // }
+                    }
+                        catch (error) {
+                        console.log('try catch');
+                        alert("Incorrect Credentails !")
+                        console.log(error);
+                    }
+                    }
                 }
+            
         })
     </script>
     <!-- VUE INSTANCE -->

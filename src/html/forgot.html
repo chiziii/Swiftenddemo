@@ -12,8 +12,6 @@
      <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
      <!-- AXIOS CDN -->
      <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous"></script>
-     <!-- VUE ROUTER -->
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue-router/3.5.1/vue-router.min.js" integrity="sha512-c5QVsHf336TmWncPySsNK2ncFiVsPEWOiJGDH/Le/5U6q1hU6F5B7ziAgRwCokxjmu4HZBkfWsQg/D/+X3hFww==" crossorigin="anonymous"></script>
     <!-- Fav Icon  -->
     <link rel="shortcut icon" href="./images/favicon.png">
     <!-- Page Title  -->
@@ -115,19 +113,19 @@
                 }
                 },
                 methods: {
-                  handleSubmit() {
-                      const data = {
-                        company_name: this.email,
-                      }
-                      console.log(data)
-                  }
-                    // async handleSubmit(){
-                    // await axios.post('SignUp',  {
-                    //     company_name: this.company_name,
-                    //     email: this.email,
-                    // });
+                    async handleSubmit(){
+                        try{
+                    await axios.post('https://powerful-wave-30297.herokuapp.com/api/forgotPassword',  {
+                        email: this.email,
+                    });
+                    window.location.replace("./html/success.html");
                     
-                    // }
+                }catch (error) {
+                        console.log('try catch');
+                        alert("Incorrect Credentails !")
+                        console.log(error);
+                    }
+                }
                 }
         })
     </script>

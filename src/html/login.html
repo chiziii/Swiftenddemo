@@ -6,13 +6,16 @@
     <meta charset="utf-8">
     <meta name="author" content="Softnio">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="A powerful and conceptual apps base dashboard template that especially build for developers and programmers.">
+    <meta name="description"
+        content="A powerful and conceptual apps base dashboard template that especially build for developers and programmers.">
 
-      <!-- VUE CDN -->
-      <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
-      <!-- AXIOS CDN -->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous"></script>
-      
+    <!-- VUE CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <!-- AXIOS CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
+        integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
+        crossorigin="anonymous"></script>
+
     <!-- Fav Icon  -->
     <link rel="shortcut icon" href="./images/favicon.png">
     <!-- Page Title  -->
@@ -33,8 +36,10 @@
                     <div class="nk-block nk-block-middle nk-auth-body  wide-xs">
                         <div class="brand-logo pb-4 text-center">
                             <a href="html/index.html" class="logo-link">
-                                <img class="logo-light logo-img logo-img-lg" src="./images/logo.png" srcset="./images/logo2x.png 2x" alt="logo">
-                                <img class="logo-dark logo-img logo-img-lg" src="./images/logo-dark.png" srcset="./images/logo-dark2x.png 2x" alt="logo-dark">
+                                <img class="logo-light logo-img logo-img-lg" src="./images/logo.png"
+                                    srcset="./images/logo2x.png 2x" alt="logo">
+                                <img class="logo-dark logo-img logo-img-lg" src="./images/logo-dark.png"
+                                    srcset="./images/logo-dark2x.png 2x" alt="logo-dark">
                             </a>
                         </div>
                         <div class="card">
@@ -52,29 +57,34 @@
                                         <div class="form-label-group">
                                             <label class="form-label" for="default-01">Email address</label>
                                         </div>
-                                        <input type="text" class="form-control form-control-lg" id="default-01" v-model="email" placeholder="Enter your email address or username" required>
+                                        <input type="email" class="form-control form-control-lg" id="default-01"
+                                            v-model="email" placeholder="Enter your email address or username" required>
                                     </div>
                                     <div class="form-group">
                                         <div class="form-label-group">
                                             <label class="form-label" for="password">Password</label>
-                                            <a class="link link-primary link-sm" href="./html/forgot.html">Forgot password?</a>
+                                            <a class="link link-primary link-sm" href="./html/forgot.html">Forgot
+                                                password?</a>
                                         </div>
                                         <div class="form-control-wrap">
-                                            <a href="#" class="form-icon form-icon-right passcode-switch" data-target="password">
+                                            <a href="#" class="form-icon form-icon-right passcode-switch"
+                                                data-target="password">
                                                 <em class="passcode-icon icon-show icon ni ni-eye"></em>
                                                 <em class="passcode-icon icon-hide icon ni ni-eye-off"></em>
                                             </a>
-                                            <input type="password" class="form-control form-control-lg" id="password" v-model="password" placeholder="Enter your passcode" required>
+                                            <input type="password" class="form-control form-control-lg" id="password"
+                                                v-model="password" placeholder="Enter your passcode" required>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
                                     </div>
                                 </form>
-                                <div class="form-note-s2 text-center pt-4"><a href="./html/register.html">Create an account</a>
+                                <div class="form-note-s2 text-center pt-4"><a href="./html/register.html">Create an
+                                        account</a>
                                 </div>
-                                
-                                
+
+
                             </div>
                         </div>
                     </div>
@@ -92,7 +102,7 @@
                                         <li class="nav-item">
                                             <a class="nav-link" href="#">Help</a>
                                         </li>
-                                        
+
                                     </ul>
                                 </div>
                                 <div class="col-lg-6">
@@ -113,33 +123,39 @@
     <!-- app-root @e -->
     <!-- JavaScript -->
 
-     <!-- VUE INSTANCE -->
-     <script>
+    <!-- VUE INSTANCE -->
+    <script>
+
         const vueApp = new Vue({
             el: '#app-vue',
-            data(){
-                return{
+            data() {
+                
+                return {
                     email: '',
                     password: '',
                 }
-                },
-                methods: {
-                  handleSubmit() {
-                      const data = {
-                        company_name: this.email,
-                        email: this.password,
-                      }
-                      console.log(data)
-                      
-                  }
-                    // async handleSubmit(){
-                    // await axios.post('SignUp',  {
-                    //     company_name: this.company_name,
-                    //     email: this.email,
-                    // });
+            },
+            methods: {
+                async handleSubmit() {
+                    try {
+                        const response = await axios.post('https://powerful-wave-30297.herokuapp.com/api/login', {
+                            email: this.email,
+                            password: this.password,
+                        });
+
+                        localStorage.setItem('token', response.data.token)
+                        window.location.replace("./html/dashboard.html");
+                    } catch (error) {
+                        console.log('try catch');
+                        alert("Incorrect Credentails !")
+                        console.log(error);
+                    }
                     
-                    // }
-                }
+                        email: '';
+                        password: ''
+                },
+
+            }
         })
     </script>
     <!-- VUE INSTANCE -->
@@ -147,4 +163,5 @@
     <script src="./assets/js/bundle.js?ver=1.9.2"></script>
     <script src="./assets/js/scripts.js?ver=1.9.2"></script>
 </body>
+
 </html>
