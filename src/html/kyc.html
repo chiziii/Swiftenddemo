@@ -7,14 +7,6 @@
     <meta name="author" content="Softnio">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="A powerful and conceptual apps base dashboard template that especially build for developers and programmers.">
-
-   <!-- VUE CDN -->
-   <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
-   <!-- AXIOS CDN -->
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
-       integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
-       crossorigin="anonymous"></script>
-
     <!-- Fav Icon  -->
     <link rel="shortcut icon" href="./images/favicon.png">
     <!-- Page Title  -->
@@ -27,7 +19,7 @@
 <body class="nk-body bg-lighter npc-default has-sidebar ">
     <div class="nk-app-root">
         <!-- main @s -->
-        <div class="nk-main" id="app-vue">
+        <div class="nk-main ">
             <!-- sidebar @s -->
             <div class="nk-sidebar nk-sidebar-fixed is-light " data-content="sidebarMenu">
                 <div class="nk-sidebar-element nk-sidebar-head">
@@ -210,13 +202,14 @@
                                                         <div class="align-center flex-wrap flex-md-nowrap g-4">
                                                             <div class="nk-block-content">
                                                                 <div class="nk-block-content-head px-lg-4">
-                                                                    <h5>KYC Verification <span class="badge badge-dim badge-danger badge-pill">Pending</span></h5>
+                                                                    <h5>Verify an Identity <span class="badge 
+                                                                        badge-dim badge-success badge-pill">Completed</span></h5>
                                                                     
-                                                                    <p class="text-soft">To comply with regulation, you will have to go through identity verification (KYC/AML) to prevent fraud causes.</p>
+                                                                    <p class="text-soft">Ask a question or file a support ticket, manage request, report an issues. Our team support team will get back to you by email.</p>
                                                                 </div>
                                                             </div>
                                                             <div class="nk-block-content flex-shrink-0">
-                                                                <a href="#" class="btn btn-lg btn-outline-primary" data-toggle="modal" data-target="#profile-edit">Complete your KYC</a>
+                                                                <a href="#" class="btn btn-lg btn-outline-primary">Quick Verification</a>
                                                             </div>
                                                         </div>
                                                     </div><!-- .card-inner -->
@@ -226,9 +219,25 @@
                                                 <div class="card">
                                                     <div class="card-inner">
                                                         <div class="align-center flex-wrap flex-md-nowrap g-4">
-                                                             <div class="nk-block-content">
+                                                            <div class="nk-block-image w-120px flex-shrink-0">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 90">
+                                                                    <rect x="13" y="16" width="68" height="66" rx="6" ry="6" fill="#fff" stroke="#fb8f09" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></rect>
+                                                                    <rect x="24" y="82" width="11" height="5" fill="#fff" stroke="#fb8f09" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></rect>
+                                                                    <rect x="60" y="82" width="11" height="5" fill="#fff" stroke="#fb8f09" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></rect>
+                                                                    <path d="M47,70.15S61.89,62.49,61.89,51V37.6L47,31.85,32.11,37.6V51C32.11,62.49,47,70.15,47,70.15Z" fill="#eff1ff" stroke="#fb8f09" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+                                                                    <path d="M41.56,48H52.44A1.6,1.6,0,0,1,54,49.59v5.73A1.6,1.6,0,0,1,52.44,57H41.56A1.6,1.6,0,0,1,40,55.32V49.59A1.6,1.6,0,0,1,41.56,48Z" fill="#fb8f09" stroke="#fb8f09" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+                                                                    <path d="M43,48V45a4,4,0,0,1,8,0v3" fill="none" stroke="#fb8f09" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+                                                                    <circle cx="46.67" cy="52.79" r="0.91" fill="#fff" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></circle>
+                                                                    <circle cx="23" cy="17" r="14" fill="#fff" stroke="#fb8f09" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></circle>
+                                                                    <circle cx="23" cy="17" r="10.5" fill="#e3e7fe"></circle>
+                                                                    <path d="M28.46,20.47l-4.41-4.41a3.4,3.4,0,0,0,.26-1.31A3.34,3.34,0,1,0,21,18.1a3.41,3.41,0,0,0,1.31-.27l1.44,1.45a.33.33,0,0,0,.23.09l.79,0,0,.79a.32.32,0,0,0,.09.23.27.27,0,0,0,.23.08l.79,0,0,.79a.31.31,0,0,0,.09.22.29.29,0,0,0,.22.09l.79,0,0,.79a.3.3,0,0,0,.09.24.32.32,0,0,0,.21.08h0l1.21-.14a.3.3,0,0,0,.27-.33l-.13-1.48Z" fill="#fb8f09"></path>
+                                                                    <path d="M20.56,14.09a1,1,0,0,1-1.34,0,1,1,0,0,1,0-1.35,1,1,0,1,1,1.34,1.35Z" fill="#fff"></path>
+                                                                    <path d="M23.72,16.39h0l3.79,3.79a.22.22,0,0,1,0,.32h0a.24.24,0,0,1-.32,0l-3.75-3.76Z" fill="#fff"></path>
+                                                                    <rect x="17.32" y="11.6" width="11" height="11" fill="none"></rect>
+                                                                </svg></div>
+                                                            <div class="nk-block-content">
                                                                 <div class="nk-block-content-head px-lg-4">
-                                                                    <h5><em class="ni ni-setting"></em> Security Settings</h5>
+                                                                    <h5>Security Settings</h5>
                                                                     <p class="text-soft">Ask a question or file a support ticket, manage request, report an issues. Our team support team will get back to you by email.</p>
                                                                 </div>
                                                             </div>
@@ -243,14 +252,31 @@
                                                 <div class="card">
                                                     <div class="card-inner">
                                                         <div class="align-center flex-wrap flex-md-nowrap g-4">
+                                                            <div class="nk-block-image w-120px flex-shrink-0">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 90">
+                                                                    <path d="M40.74,5.16l38.67,9.23a6,6,0,0,1,4.43,7.22L70.08,80a6,6,0,0,1-7.17,4.46L24.23,75.22A6,6,0,0,1,19.81,68L33.56,9.62A6,6,0,0,1,40.74,5.16Z" fill="#eff1ff" stroke="#fb8f09" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+                                                                    <path d="M50.59,6.5,11.18,11.73a6,6,0,0,0-5.13,6.73L13.85,78a6,6,0,0,0,6.69,5.16l39.4-5.23a6,6,0,0,0,5.14-6.73l-7.8-59.49A6,6,0,0,0,50.59,6.5Z" fill="#eff1ff" stroke="#fb8f09" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+                                                                    <rect x="15" y="15" width="54" height="70" rx="6" ry="6" fill="#fff" stroke="#fb8f09" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></rect>
+                                                                    <line x1="42" y1="77" x2="58" y2="77" fill="none" stroke="#c4cefe" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></line>
+                                                                    <circle cx="38" cy="77" r="0.5" fill="#c4cefe" stroke="#c4cefe" stroke-miterlimit="10"></circle>
+                                                                    <line x1="42" y1="72" x2="58" y2="72" fill="none" stroke="#c4cefe" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></line>
+                                                                    <circle cx="38" cy="72" r="0.5" fill="#c4cefe" stroke="#c4cefe" stroke-miterlimit="10"></circle>
+                                                                    <line x1="42" y1="66" x2="58" y2="66" fill="none" stroke="#c4cefe" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></line>
+                                                                    <circle cx="38" cy="66" r="0.5" fill="#c4cefe" stroke="#c4cefe" stroke-miterlimit="10"></circle>
+                                                                    <path d="M46,40l-15-.3V40A15,15,0,1,0,46,25h-.36Z" fill="#e3e7fe" stroke="#fb8f09" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+                                                                    <path d="M42,22A14,14,0,0,0,28,36H42V22" fill="#e3e7fe" stroke="#fb8f09" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+                                                                    <polyline points="33.47 30.07 28.87 23 23 23" fill="none" stroke="#fb8f09" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></polyline>
+                                                                    <polyline points="25 56 35 56 40.14 49" fill="none" stroke="#fb8f09" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></polyline>
+                                                                </svg>
+                                                            </div>
                                                             <div class="nk-block-content">
                                                                 <div class="nk-block-content-head px-lg-4">
-                                                                    <h5><em class="ni ni-coins"></em> Billing History</h5>
+                                                                    <h5>Billing History</h5>
                                                                     <p class="text-soft">Ask a question or file a support ticket, manage request, report an issues. Our team support team will get back to you by email.</p>
                                                                 </div>
                                                             </div>
                                                             <div class="nk-block-content flex-shrink-0">
-                                                                <a href="#" class="btn btn-lg btn-outline-primary "data-toggle="modal" data-target="#fundwallet">Fund wallet</a>
+                                                                <a href="#" class="btn btn-lg btn-outline-primary">Fund wallet</a>
                                                             </div>
                                                         </div>
                                                     </div><!-- .card-inner -->
@@ -260,14 +286,24 @@
                                                 <div class="card">
                                                     <div class="card-inner">
                                                         <div class="align-center flex-wrap flex-md-nowrap g-4">
+                                                            <div class="nk-block-image w-120px flex-shrink-0">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 90">
+                                                                    <path d="M63.42,87H10.58A4.08,4.08,0,0,1,6.5,82.92V7.08A4.08,4.08,0,0,1,10.58,3H48.32L67.5,21.23V82.92A4.08,4.08,0,0,1,63.42,87ZM47.5,3V16.92A4,4,0,0,0,51.38,21H66.5" fill="#fff" stroke="#fb8f09" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"></path>
+                                                                    <circle cx="17" cy="39.5" r="4.5" fill="none" stroke="#fb8f09" stroke-miterlimit="10" stroke-width="2"></circle>
+                                                                    <line x1="28.5" y1="37" x2="36.5" y2="37" fill="none" stroke="#fb8f09" stroke-miterlimit="10" stroke-width="2"></line>
+                                                                    <line x1="28.5" y1="42" x2="43.5" y2="42" fill="none" stroke="#fb8f09" stroke-miterlimit="10" stroke-width="2"></line>
+                                                                    <circle cx="17" cy="56.5" r="4.5" fill="none" stroke="#fb8f09" stroke-miterlimit="10" stroke-width="2"></circle>
+                                                                    <line x1="28.5" y1="54" x2="36.5" y2="54" fill="none" stroke="#fb8f09" stroke-miterlimit="10" stroke-width="2"></line>
+                                                                    <line x1="28.5" y1="59" x2="43.5" y2="59" fill="none" stroke="#fb8f09" stroke-miterlimit="10" stroke-width="2"></line>
+                                                                </svg></div>
                                                             <div class="nk-block-content">
                                                                 <div class="nk-block-content-head px-lg-4">
-                                                                    <h5><em class="ni ni-todo"></em> API Keys & Webhook</h5>
+                                                                    <h5>Documentation</h5>
                                                                     <p class="text-soft">Ask a question or file a support ticket, manage request, report an issues. Our team support team will get back to you by email.</p>
                                                                 </div>
                                                             </div>
                                                             <div class="nk-block-content flex-shrink-0">
-                                                                <a href="#" class="btn btn-lg btn-outline-primary">API Settings</a>
+                                                                <a href="#" class="btn btn-lg btn-outline-primary">View documentation</a>
                                                             </div>
                                                         </div>
                                                     </div><!-- .card-inner -->
@@ -277,7 +313,8 @@
                                                 <div class="card">
                                                     <div class="card-inner">
                                                         <div class="align-center flex-wrap flex-md-nowrap g-4">
-                                                              <div class="nk-block-content">
+                                                            
+                                                            <div class="nk-block-content">
                                                                 <div class="nk-block-content-head px-lg-4">
                                                                     <h5>We’re here to help you!</h5>
                                                                     <p class="text-soft">Ask a question or file a support ticket, manage request, report an issues. Our team support team will get back to you by email.</p>
@@ -296,158 +333,6 @@
                             </div>
                         </div>
                     </div>
-                            <!-- @@ KYC MOdal @e -->
-        <div class="modal fade" tabindex="-1" role="dialog" id="profile-edit">
-            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-                <div class="modal-content">
-                    <a href="#" class="close" data-dismiss="modal"><em class="icon ni ni-cross-sm"></em></a>
-                    <div class="modal-body modal-body-lg">
-                        <h5 class="title">Update Profile</h5>
-                        <ul class="nk-nav nav nav-tabs">
-                            <li class="nav-item">
-                                <a class="nav-link active" data-toggle="tab" href="#personal">Personal Information</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" data-toggle="tab" href="#address">Company Details</a>
-                            </li>
-                        </ul><!-- .nav-tabs -->
-                        <div class="tab-content" >
-                            
-                            <div class="tab-pane active" id="personal">
-                                <form class="row gy-4" @submit.prevent="handleSubmit" method="POST"> 
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label class="form-label" for="full-name">Full Name</label>
-                                            <input type="text" class="form-control form-control-lg" id="full-name" value="Arogundade Sadiq" disabled placeholder="Enter Full name">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label class="form-label" for="phonenumber">Phone Number</label>
-                                            <input type="text" class="form-control form-control-lg" id="display-name" value="08082873187" disabled placeholder="Enter Phone Number">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label class="form-label" for="ID">NIN / BVN</label>
-                                            <input  class="form-control form-control-lg" v-model="posts.nin" name="nin"  placeholder="Phone Number">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label class="form-label" for="birth-day">Date of Birth</label>
-                                            <input  type="date" class="form-control form-control-lg"  v-model="posts.dob" name="dob"  placeholder="16-May-1960">
-                                        </div>
-                                    </div>
-                                    <div class="col-12">
-                                        <div class="form-group">
-                                            <label class="form-label" for="birth-day">Address</label>
-                                            <input type="text" class="form-control form-control-lg" id="birth-day" placeholder="Enter your home address">
-                                        </div>
-                                    </div>
-                                    <div class="col-12">
-                                        <ul class="align-center flex-wrap flex-sm-nowrap gx-4 gy-2">
-                                            <li>
-                                                <button class="btn btn-lg btn-primary" type="submit">Update Profile</button>
-                                            </li>
-                                            <li>
-                                                <a href="#" data-dismiss="modal" class="link link-light">Cancel</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </form>
-                            </div><!-- .tab-pane -->
-                            <div class="tab-pane" id="address">
-                                <div class="row gy-4">
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label class="form-label" for="address-l1">Company Name</label>
-                                            <input type="text" class="form-control form-control-lg" id="address-l1" value="Kildeer Dri Limited">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label class="form-label" for="address-l2">Registration No</label>
-                                            <input type="text" class="form-control form-control-lg" id="address-l2" value="rc 573922">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="upload-zone small bg-lighter dropzone dz-clickable">
-                                            <div class="dz-message" data-dz-message="">
-                                                <span class="dz-message-text"><span>Drag and drop</span> file here or <span>browse</span></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label class="form-label" for="address-county">Country</label>
-                                            <select class="form-select" id="address-county" data-ui="lg">
-                                                <option>Nigeria</option>
-                                                <option>United State</option>
-                                                <option>United Kindom</option>
-                                                <option>Australia</option>
-                                                <option>India</option>
-                                                <option>Bangladesh</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-12">
-                                        <ul class="align-center flex-wrap flex-sm-nowrap gx-4 gy-2">
-                                            <li>
-                                                <a href="#" class="btn btn-lg btn-primary">Update Company</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" data-dismiss="modal" class="link link-light">Cancel</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div><!-- .tab-pane -->
-                        </div><!-- .tab-content -->
-                    </div><!-- .modal-body -->
-                </div><!-- .modal-content -->
-            </div><!-- .modal-dialog -->
-        </div><!-- .modal -->
-
-         <!-- @@ KYC MOdal @e -->
-         <div class="modal fade" tabindex="-1" role="dialog" id="fundwallet">
-            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-                    <div class="modal-content">
-                        <a href="#" class="close" data-dismiss="modal"><em class="icon ni ni-cross-sm"></em></a>
-                        <div class="modal-body modal-body-lg">
-                            <h5 class="nk-block-title">Confirm Order</h5>
-                            <form action="html/pages/auths/auth-success-v2.html">
-                                <div class="form-group">
-                                    
-                                </div>
-                                <div class="form-group">
-                                    <label class="form-label" for="email">Enter Amount</label>
-                                    <input type="text" class="form-control form-control-lg" id="amount" placeholder="100,000">
-                                </div>
-                                <div class="form-group">
-                                    <label class="form-label" for="password">Choose wallet to Fund</label>
-                                    <div class="form-group">
-                                        
-                                        <select class="form-select" id="address-county" data-ui="lg">
-                                            <option>Kpower Limited - Wallet</option>
-                                            <option>Script1 - Wallet</option>
-                                            <option>BettaHealth - Wallet</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <div class="custom-control custom-control-xs custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="checkbox">
-                                        <label class="custom-control-label" for="checkbox">I agree to Dashlite <a href="#">Privacy Policy</a> &amp; <a href="#"> Terms.</a></label>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <button class="btn btn-lg btn-primary btn-block">Continue</button>
-                                </div>
-                            </form>
-                        </div><!-- .modal-body -->
-                    </div><!-- .modal-dialog -->
-        </div><!-- .modal -->
                 </div>
                 
                 <!-- content @e -->
@@ -474,59 +359,6 @@
         <!-- main @e -->
     </div>
     <!-- app-root @e -->
-    <!-- VUE INSTANCE -->
-    <script>
-
-        const vueApp = new Vue({
-            el: '#app-vue',
-            data() {
-                
-                return {
-                    posts : {
-                        nin: null,
-                        dob: null,
-                    }
-                   
-                }
-            },
-            methods: {
-               
-
-                handleSubmit(){
-                    console.log("i am here")
-                    axios.post( "https://powerful-wave-30297.herokuapp.com/api/kyc", this.posts ,{
-                       headers: {
-                           Authorization: 'Bearer ' + localStorage.getItem('token')
-                       }
-                    })
-                    
-                    .then((result) => {
-                        console.log(result);
-
-                        nin: '';
-                        dob: ''
-                    })
-                }
-
-                // async handleSubmit() {
-                //     try {
-                //         const response = await axios.post('https://powerful-wave-30297.herokuapp.com/api/kyc', {
-                //             nin: this.nin,
-                //             dob: this.dob,
-                //         });
-
-                //     } catch (error) {
-                //         console.log('try catch');
-                //         alert("Incorrect Credentails !")
-                //         console.log(error);
-                //     }
-                    
-                // },
-
-            }
-        })
-    </script>
-    <!-- VUE INSTANCE -->
     <!-- JavaScript -->
     <script src="./assets/js/bundle.js?ver=1.9.2"></script>
     <script src="./assets/js/scripts.js?ver=1.9.2"></script>

@@ -10,7 +10,7 @@
     <!-- Fav Icon  -->
     <link rel="shortcut icon" href="./images/favicon.png">
     <!-- Page Title  -->
-    <title>Default Dashboard | DashLite Admin Template</title>
+    <title>Messages - Support Ticket | DashLite Admin Template</title>
     <!-- StyleSheets  -->
     <link rel="stylesheet" href="./assets/css/dashlite.css?ver=1.9.2">
     <link id="skin-default" rel="stylesheet" href="./assets/css/theme.css?ver=1.9.2">
@@ -681,485 +681,623 @@
                 </div>
                 <!-- main header @e -->
                 <!-- content @s -->
-                <div class="nk-content ">
-                    <div class="container-fluid">
-                        <div class="nk-content-inner">
-                            <div class="nk-content-body">
-                                <div class="nk-block-head nk-block-head-sm">
-                                    <div class="nk-block-between">
-                                        <div class="nk-block-head-content">
-                                            <h3 class="nk-block-title page-title">Dashboard</h3>
-                                        </div><!-- .nk-block-head-content -->
-                                        <div class="nk-block-head-content">
-                                            <div class="toggle-wrap nk-block-tools-toggle">
-                                                <a href="#" class="btn btn-icon btn-trigger toggle-expand mr-n1" data-target="pageMenu"><em class="icon ni ni-more-v"></em></a>
-                                                <div class="toggle-expand-content" data-content="pageMenu">
-                                                    <ul class="nk-block-tools g-3">
-                                                        <li>
-                                                            <div class="drodown">
-                                                                <a href="#" class="dropdown-toggle btn btn-white btn-dim btn-outline-light" data-toggle="dropdown"><em class="d-none d-sm-inline icon ni ni-calender-date"></em><span><span class="d-none d-md-inline">Last</span> 30 Days</span><em class="dd-indc icon ni ni-chevron-right"></em></a>
-                                                                <div class="dropdown-menu dropdown-menu-right">
-                                                                    <ul class="link-list-opt no-bdr">
-                                                                        <li><a href="#"><span>Last 30 Days</span></a></li>
-                                                                        <li><a href="#"><span>Last 6 Months</span></a></li>
-                                                                        <li><a href="#"><span>Last 1 Years</span></a></li>
-                                                                    </ul>
-                                                                </div>
-                                                            </div>
-                                                        </li>
-                                                        <li class="nk-block-tools-opt"><a href="#" class="btn btn-primary"><em class="icon ni ni-reports"></em><span>Reports</span></a></li>
-                                                    </ul>
+                <div class="nk-content p-0">
+                    <div class="nk-content-inner">
+                        <div class="nk-content-body">
+                            <div class="nk-msg">
+                                <div class="nk-msg-aside">
+                                    <div class="nk-msg-nav">
+                                        <ul class="nk-msg-menu">
+                                            <li class="nk-msg-menu-item active"><a href="">Active</a></li>
+                                            <li class="nk-msg-menu-item"><a href="">Closed</a></li>
+                                            <li class="nk-msg-menu-item"><a href="">Stared</a></li>
+                                            <li class="nk-msg-menu-item"><a href="">All</a></li>
+                                            <li class="nk-msg-menu-item ml-auto"><a href="" class="search-toggle toggle-search" data-target="search"><em class="icon ni ni-search"></em></a></li>
+                                        </ul><!-- .nk-msg-menu -->
+                                        <div class="search-wrap" data-search="search">
+                                            <div class="search-content">
+                                                <a href="#" class="search-back btn btn-icon toggle-search" data-target="search"><em class="icon ni ni-arrow-left"></em></a>
+                                                <input type="text" class="form-control border-transparent form-focus-none" placeholder="Search by user or message">
+                                                <button class="search-submit btn btn-icon"><em class="icon ni ni-search"></em></button>
+                                            </div>
+                                        </div><!-- .search-wrap -->
+                                    </div><!-- .nk-msg-nav -->
+                                    <div class="nk-msg-list" data-simplebar>
+                                        <div class="nk-msg-item current" data-msg-id="1">
+                                            <div class="nk-msg-media user-avatar">
+                                                <span>AB</span>
+                                            </div>
+                                            <div class="nk-msg-info">
+                                                <div class="nk-msg-from">
+                                                    <div class="nk-msg-sender">
+                                                        <div class="name">Abu Bin Ishtiyak</div>
+                                                        <div class="lable-tag dot bg-pink"></div>
+                                                    </div>
+                                                    <div class="nk-msg-meta">
+                                                        <div class="attchment"><em class="icon ni ni-clip-h"></em></div>
+                                                        <div class="date">12 Jan</div>
+                                                    </div>
+                                                </div>
+                                                <div class="nk-msg-context">
+                                                    <div class="nk-msg-text">
+                                                        <h6 class="title">Unable to select currency when order.</h6>
+                                                        <p>Hello team, I am facing problem as i can not select currency on buy order page.</p>
+                                                    </div>
+                                                    <div class="nk-msg-lables">
+                                                        <div class="asterisk"><a href="#"><em class="asterisk-off icon ni ni-star"></em><em class="asterisk-on icon ni ni-star-fill"></em></a></div>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div><!-- .nk-block-head-content -->
-                                    </div><!-- .nk-block-between -->
-                                </div><!-- .nk-block-head -->
-                                <div class="nk-block">
-                                    <div class="row g-gs">
-                                        <div class="col-xxl-3 col-sm-6">
-                                            <div class="card">
-                                                <div class="nk-ecwg nk-ecwg6">
-                                                    <div class="card-inner">
-                                                        <div class="card-title-group">
-                                                            <div class="card-title">
-                                                                <h6 class="title">Today Orders</h6>
-                                                            </div>
-                                                        </div>
-                                                        <div class="data">
-                                                            <div class="data-group">
-                                                                <div class="amount">1,945</div>
-                                                                <div class="nk-ecwg6-ck">
-                                                                    <canvas class="ecommerce-line-chart-s3" id="todayOrders"></canvas>
-                                                                </div>
-                                                            </div>
-                                                            <div class="info"><span class="change up text-danger"><em class="icon ni ni-arrow-long-up"></em>4.63%</span><span> vs. last week</span></div>
-                                                        </div>
-                                                    </div><!-- .card-inner -->
-                                                </div><!-- .nk-ecwg -->
-                                            </div><!-- .card -->
-                                        </div><!-- .col -->
-                                        <div class="col-xxl-3 col-sm-6">
-                                            <div class="card">
-                                                <div class="nk-ecwg nk-ecwg6">
-                                                    <div class="card-inner">
-                                                        <div class="card-title-group">
-                                                            <div class="card-title">
-                                                                <h6 class="title">Today Revenue</h6>
-                                                            </div>
-                                                        </div>
-                                                        <div class="data">
-                                                            <div class="data-group">
-                                                                <div class="amount">$2,338</div>
-                                                                <div class="nk-ecwg6-ck">
-                                                                    <canvas class="ecommerce-line-chart-s3" id="todayRevenue"></canvas>
-                                                                </div>
-                                                            </div>
-                                                            <div class="info"><span class="change down text-danger"><em class="icon ni ni-arrow-long-down"></em>2.34%</span><span> vs. last week</span></div>
-                                                        </div>
-                                                    </div><!-- .card-inner -->
-                                                </div><!-- .nk-ecwg -->
-                                            </div><!-- .card -->
-                                        </div><!-- .col -->
-                                        <div class="col-xxl-3 col-sm-6">
-                                            <div class="card">
-                                                <div class="nk-ecwg nk-ecwg6">
-                                                    <div class="card-inner">
-                                                        <div class="card-title-group">
-                                                            <div class="card-title">
-                                                                <h6 class="title">Today Customers</h6>
-                                                            </div>
-                                                        </div>
-                                                        <div class="data">
-                                                            <div class="data-group">
-                                                                <div class="amount">847</div>
-                                                                <div class="nk-ecwg6-ck">
-                                                                    <canvas class="ecommerce-line-chart-s3" id="todayCustomers"></canvas>
-                                                                </div>
-                                                            </div>
-                                                            <div class="info"><span class="change up text-danger"><em class="icon ni ni-arrow-long-up"></em>4.63%</span><span> vs. last week</span></div>
-                                                        </div>
-                                                    </div><!-- .card-inner -->
-                                                </div><!-- .nk-ecwg -->
-                                            </div><!-- .card -->
-                                        </div><!-- .col -->
-                                        <div class="col-xxl-3 col-sm-6">
-                                            <div class="card">
-                                                <div class="nk-ecwg nk-ecwg6">
-                                                    <div class="card-inner">
-                                                        <div class="card-title-group">
-                                                            <div class="card-title">
-                                                                <h6 class="title">Today Visitors</h6>
-                                                            </div>
-                                                        </div>
-                                                        <div class="data">
-                                                            <div class="data-group">
-                                                                <div class="amount">23,485</div>
-                                                                <div class="nk-ecwg6-ck">
-                                                                    <canvas class="ecommerce-line-chart-s3" id="todayVisitors"></canvas>
-                                                                </div>
-                                                            </div>
-                                                            <div class="info"><span class="change down text-danger"><em class="icon ni ni-arrow-long-down"></em>2.34%</span><span> vs. last week</span></div>
-                                                        </div>
-                                                    </div><!-- .card-inner -->
-                                                </div><!-- .nk-ecwg -->
-                                            </div><!-- .card -->
-                                        </div><!-- .col -->
-                                        <div class="col-xxl-6">
-                                            <div class="card card-full">
-                                                <div class="nk-ecwg nk-ecwg8 h-100">
-                                                    <div class="card-inner">
-                                                        <div class="card-title-group mb-3">
-                                                            <div class="card-title">
-                                                                <h6 class="title">Sales Statistics</h6>
-                                                            </div>
-                                                            <div class="card-tools">
-                                                                <div class="dropdown">
-                                                                    <a href="#" class="dropdown-toggle link link-light link-sm dropdown-indicator" data-toggle="dropdown">Weekly</a>
-                                                                    <div class="dropdown-menu dropdown-menu-sm dropdown-menu-right">
-                                                                        <ul class="link-list-opt no-bdr">
-                                                                            <li><a href="#"><span>Daily</span></a></li>
-                                                                            <li><a href="#" class="active"><span>Weekly</span></a></li>
-                                                                            <li><a href="#"><span>Monthly</span></a></li>
-                                                                        </ul>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <ul class="nk-ecwg8-legends">
-                                                            <li>
-                                                                <div class="title">
-                                                                    <span class="dot dot-lg sq" data-bg="#6576ff"></span>
-                                                                    <span>Total Order</span>
-                                                                </div>
-                                                            </li>
-                                                            <li>
-                                                                <div class="title">
-                                                                    <span class="dot dot-lg sq" data-bg="#eb6459"></span>
-                                                                    <span>Canceled Order</span>
-                                                                </div>
-                                                            </li>
-                                                        </ul>
-                                                        <div class="nk-ecwg8-ck">
-                                                            <canvas class="ecommerce-line-chart-s4" id="salesStatistics"></canvas>
-                                                        </div>
-                                                        <div class="chart-label-group pl-5">
-                                                            <div class="chart-label">01 Jul, 2020</div>
-                                                            <div class="chart-label">30 Jul, 2020</div>
-                                                        </div>
-                                                    </div><!-- .card-inner -->
-                                                </div>
-                                            </div><!-- .card -->
-                                        </div><!-- .col -->
-                                        <div class="col-xxl-3 col-md-6">
-                                            <div class="card card-full overflow-hidden">
-                                                <div class="nk-ecwg nk-ecwg7 h-100">
-                                                    <div class="card-inner flex-grow-1">
-                                                        <div class="card-title-group mb-4">
-                                                            <div class="card-title">
-                                                                <h6 class="title">Order Statistics</h6>
-                                                            </div>
-                                                        </div>
-                                                        <div class="nk-ecwg7-ck">
-                                                            <canvas class="ecommerce-doughnut-s1" id="orderStatistics"></canvas>
-                                                        </div>
-                                                        <ul class="nk-ecwg7-legends">
-                                                            <li>
-                                                                <div class="title">
-                                                                    <span class="dot dot-lg sq" data-bg="#816bff"></span>
-                                                                    <span>Completed</span>
-                                                                </div>
-                                                            </li>
-                                                            <li>
-                                                                <div class="title">
-                                                                    <span class="dot dot-lg sq" data-bg="#13c9f2"></span>
-                                                                    <span>Processing</span>
-                                                                </div>
-                                                            </li>
-                                                            <li>
-                                                                <div class="title">
-                                                                    <span class="dot dot-lg sq" data-bg="#ff82b7"></span>
-                                                                    <span>Canclled</span>
-                                                                </div>
-                                                            </li>
-                                                        </ul>
-                                                    </div><!-- .card-inner -->
-                                                </div>
-                                            </div><!-- .card -->
-                                        </div><!-- .col -->
-                                        <div class="col-xxl-3 col-md-6">
-                                            <div class="card h-100">
-                                                <div class="card-inner">
-                                                    <div class="card-title-group mb-2">
-                                                        <div class="card-title">
-                                                            <h6 class="title">Store Statistics</h6>
-                                                        </div>
+                                        </div><!-- .nk-msg-item -->
+                                        <div class="nk-msg-item" data-msg-id="2">
+                                            <div class="nk-msg-media user-avatar">
+                                                <img src="./images/avatar/b-sm.jpg" alt="">
+                                            </div>
+                                            <div class="nk-msg-info">
+                                                <div class="nk-msg-from">
+                                                    <div class="nk-msg-sender">
+                                                        <div class="name">Jackelyn Dugas</div>
                                                     </div>
-                                                    <ul class="nk-store-statistics">
-                                                        <li class="item">
-                                                            <div class="info">
-                                                                <div class="title">Orders</div>
-                                                                <div class="count">1,795</div>
-                                                            </div>
-                                                            <em class="icon bg-primary-dim ni ni-bag"></em>
+                                                    <div class="nk-msg-meta">
+                                                        <div class="date">15 Jan</div>
+                                                    </div>
+                                                </div>
+                                                <div class="nk-msg-context">
+                                                    <div class="nk-msg-text">
+                                                        <h6 class="title">Have not received bitcoin yet.</h6>
+                                                        <p>Hey! I recently bitcoin from you. But still have not received yet.</p>
+                                                    </div>
+                                                    <div class="nk-msg-lables">
+                                                        <div class="asterisk"><a class="active" href="#"><em class="asterisk-off icon ni ni-star"></em><em class="asterisk-on icon ni ni-star-fill"></em></a></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div><!-- .nk-msg-item -->
+                                        <div class="nk-msg-item is-unread" data-msg-id="3">
+                                            <div class="nk-msg-media user-avatar bg-purple">
+                                                <span>MJ</span>
+                                            </div>
+                                            <div class="nk-msg-info">
+                                                <div class="nk-msg-from">
+                                                    <div class="nk-msg-sender">
+                                                        <div class="name">Mayme Johnston</div>
+                                                    </div>
+                                                    <div class="nk-msg-meta">
+                                                        <div class="date">11 Jan</div>
+                                                    </div>
+                                                </div>
+                                                <div class="nk-msg-context">
+                                                    <div class="nk-msg-text">
+                                                        <h6 class="title">I can not submit kyc application</h6>
+                                                        <p>Hello support! I can not upload my documents on kyc application.</p>
+                                                    </div>
+                                                    <div class="nk-msg-lables">
+                                                        <div class="unread"><span class="badge badge-primary">2</span></div>
+                                                        <div class="asterisk"><a href="#"><em class="asterisk-off icon ni ni-star"></em><em class="asterisk-on icon ni ni-star-fill"></em></a></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div><!-- .nk-msg-item -->
+                                        <div class="nk-msg-item" data-msg-id="133">
+                                            <div class="nk-msg-media user-avatar">
+                                                <img src="./images/avatar/c-sm.jpg" alt="">
+                                            </div>
+                                            <div class="nk-msg-info">
+                                                <div class="nk-msg-from">
+                                                    <div class="nk-msg-sender">
+                                                        <div class="name">Jake Smityh</div>
+                                                        <div class="lable-tag dot bg-pink"></div>
+                                                    </div>
+                                                    <div class="nk-msg-meta">
+                                                        <div class="date">30 Dec, 2019</div>
+                                                    </div>
+                                                </div>
+                                                <div class="nk-msg-context">
+                                                    <div class="nk-msg-text">
+                                                        <h6 class="title">Have not received bitcoin yet.</h6>
+                                                        <p>Hey! I recently bitcoin from you. But still have not received yet.</p>
+                                                    </div>
+                                                    <div class="nk-msg-lables">
+                                                        <div class="asterisk"><a href="#"><em class="asterisk-off icon ni ni-star"></em><em class="asterisk-on icon ni ni-star-fill"></em></a></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div><!-- .nk-msg-item -->
+                                        <div class="nk-msg-item" data-msg-id="12">
+                                            <div class="nk-msg-media user-avatar">
+                                                <img src="./images/avatar/d-sm.jpg" alt="">
+                                            </div>
+                                            <div class="nk-msg-info">
+                                                <div class="nk-msg-from">
+                                                    <div class="nk-msg-sender">
+                                                        <div class="name">Amanda Moore</div>
+                                                    </div>
+                                                    <div class="nk-msg-meta">
+                                                        <div class="date">28 Dec, 2019</div>
+                                                    </div>
+                                                </div>
+                                                <div class="nk-msg-context">
+                                                    <div class="nk-msg-text">
+                                                        <h6 class="title">Wallet needs to verify.</h6>
+                                                        <p>Hello, I already varified my Wallet but it still showing needs to verify alert.</p>
+                                                    </div>
+                                                    <div class="nk-msg-lables">
+                                                        <div class="asterisk"><a href="#"><em class="asterisk-off icon ni ni-star"></em><em class="asterisk-on icon ni ni-star-fill"></em></a></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div><!-- .nk-msg-item -->
+                                        <div class="nk-msg-item" data-msg-id="1">
+                                            <div class="nk-msg-media user-avatar bg-blue">
+                                                <span>RV</span>
+                                            </div>
+                                            <div class="nk-msg-info">
+                                                <div class="nk-msg-from">
+                                                    <div class="nk-msg-sender">
+                                                        <div class="name">Rebecca Valdez</div>
+                                                    </div>
+                                                    <div class="nk-msg-meta">
+                                                        <div class="date">26 Dec, 2019</div>
+                                                    </div>
+                                                </div>
+                                                <div class="nk-msg-context">
+                                                    <div class="nk-msg-text">
+                                                        <h6 class="title">I want my money back.</h6>
+                                                        <p>Hey! I don't want to stay as your subscriber any more, Also i want my mony back.</p>
+                                                    </div>
+                                                    <div class="nk-msg-lables">
+                                                        <div class="asterisk"><a href="#"><em class="asterisk-off icon ni ni-star"></em><em class="asterisk-on icon ni ni-star-fill"></em></a></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div><!-- .nk-msg-item -->
+                                        <div class="nk-msg-item" data-msg-id="1">
+                                            <div class="nk-msg-media user-avatar bg-orange">
+                                                <span>CG</span>
+                                            </div>
+                                            <div class="nk-msg-info">
+                                                <div class="nk-msg-from">
+                                                    <div class="nk-msg-sender">
+                                                        <div class="name">Charles Greene</div>
+                                                    </div>
+                                                    <div class="nk-msg-meta">
+                                                        <div class="date">21 Dec, 2019</div>
+                                                    </div>
+                                                </div>
+                                                <div class="nk-msg-context">
+                                                    <div class="nk-msg-text">
+                                                        <h6 class="title">Have not received bitcoin yet.</h6>
+                                                        <p>Hey! I recently bitcoin from you. But still have not received yet.</p>
+                                                    </div>
+                                                    <div class="nk-msg-lables">
+                                                        <div class="asterisk"><a href="#"><em class="asterisk-off icon ni ni-star"></em><em class="asterisk-on icon ni ni-star-fill"></em></a></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div><!-- .nk-msg-item -->
+                                        <div class="nk-msg-item" data-msg-id="1">
+                                            <div class="nk-msg-media user-avatar bg-success">
+                                                <span>EA</span>
+                                            </div>
+                                            <div class="nk-msg-info">
+                                                <div class="nk-msg-from">
+                                                    <div class="nk-msg-sender">
+                                                        <div class="name">Ethan Anderson</div>
+                                                    </div>
+                                                    <div class="nk-msg-meta">
+                                                        <div class="date">16 Dec, 2019</div>
+                                                    </div>
+                                                </div>
+                                                <div class="nk-msg-context">
+                                                    <div class="nk-msg-text">
+                                                        <h6 class="title">Unable to select currency when order.</h6>
+                                                        <p>Hello team, I am facing problem as i can not select currency on buy order page.</p>
+                                                    </div>
+                                                    <div class="nk-msg-lables">
+                                                        <div class="asterisk"><a href="#"><em class="asterisk-off icon ni ni-star"></em><em class="asterisk-on icon ni ni-star-fill"></em></a></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div><!-- .nk-msg-item -->
+                                        <div class="nk-msg-item" data-msg-id="1">
+                                            <div class="nk-msg-media user-avatar">
+                                                <img src="./images/avatar/c-sm.jpg" alt="">
+                                            </div>
+                                            <div class="nk-msg-info">
+                                                <div class="nk-msg-from">
+                                                    <div class="nk-msg-sender">
+                                                        <div class="name">Jose Peterson</div>
+                                                        <div class="lable-tag dot bg-pink"></div>
+                                                    </div>
+                                                    <div class="nk-msg-meta">
+                                                        <div class="date">14 Dec, 2019</div>
+                                                    </div>
+                                                </div>
+                                                <div class="nk-msg-context">
+                                                    <div class="nk-msg-text">
+                                                        <h6 class="title">Have not received bitcoin yet.</h6>
+                                                        <p>Hey! I recently bitcoin from you. But still have not received yet.</p>
+                                                    </div>
+                                                    <div class="nk-msg-lables">
+                                                        <div class="asterisk"><a href="#"><em class="asterisk-off icon ni ni-star"></em><em class="asterisk-on icon ni ni-star-fill"></em></a></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div><!-- .nk-msg-item -->
+                                        <div class="nk-msg-item" data-msg-id="12">
+                                            <div class="nk-msg-media user-avatar">
+                                                <img src="./images/avatar/d-sm.jpg" alt="">
+                                            </div>
+                                            <div class="nk-msg-info">
+                                                <div class="nk-msg-from">
+                                                    <div class="nk-msg-sender">
+                                                        <div class="name">Amanda Moore</div>
+                                                    </div>
+                                                    <div class="nk-msg-meta">
+                                                        <div class="date">12 Dec, 2019</div>
+                                                    </div>
+                                                </div>
+                                                <div class="nk-msg-context">
+                                                    <div class="nk-msg-text">
+                                                        <h6 class="title">Wallet needs to verify.</h6>
+                                                        <p>Hello, I already varified my Wallet but it still showing needs to verify alert.</p>
+                                                    </div>
+                                                    <div class="nk-msg-lables">
+                                                        <div class="asterisk"><a href="#"><em class="asterisk-off icon ni ni-star"></em><em class="asterisk-on icon ni ni-star-fill"></em></a></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div><!-- .nk-msg-item -->
+                                        <div class="nk-msg-item" data-msg-id="3">
+                                            <div class="nk-msg-media user-avatar bg-purple">
+                                                <span>MJ</span>
+                                            </div>
+                                            <div class="nk-msg-info">
+                                                <div class="nk-msg-from">
+                                                    <div class="nk-msg-sender">
+                                                        <div class="name">Mayme Johnston</div>
+                                                    </div>
+                                                    <div class="nk-msg-meta">
+                                                        <div class="date">09 Dec, 2019</div>
+                                                    </div>
+                                                </div>
+                                                <div class="nk-msg-context">
+                                                    <div class="nk-msg-text">
+                                                        <h6 class="title">I can not submit kyc application</h6>
+                                                        <p>Hello support! I can not upload my documents on kyc application.</p>
+                                                    </div>
+                                                    <div class="nk-msg-lables">
+                                                        <div class="asterisk"><a href="#"><em class="asterisk-off icon ni ni-star"></em><em class="asterisk-on icon ni ni-star-fill"></em></a></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div><!-- .nk-msg-item -->
+                                    </div><!-- .nk-msg-list -->
+                                </div><!-- .nk-msg-aside -->
+                                <div class="nk-msg-body bg-white profile-shown">
+                                    <div class="nk-msg-head">
+                                        <h4 class="title d-none d-lg-block">Unable to select currency when order</h4>
+                                        <div class="nk-msg-head-meta">
+                                            <div class="d-none d-lg-block">
+                                                <ul class="nk-msg-tags">
+                                                    <li><span class="label-tag"><em class="icon ni ni-flag-fill"></em> <span>Technical Problem</span></span></li>
+                                                </ul>
+                                            </div>
+                                            <div class="d-lg-none"><a href="#" class="btn btn-icon btn-trigger nk-msg-hide ml-n1"><em class="icon ni ni-arrow-left"></em></a></div>
+                                            <ul class="nk-msg-actions">
+                                                <li><a href="#" class="btn btn-dim btn-sm btn-outline-light"><em class="icon ni ni-check"></em><span>Mark as Closed</span></a></li>
+                                                <!-- <li><span class="badge badge-dim badge-success badge-sm"><em class="icon ni ni-check"></em><span>Closed</span></span></li> -->
+                                                <li class="d-lg-none"><a href="#" class="btn btn-icon btn-sm btn-white btn-light profile-toggle"><em class="icon ni ni-info-i"></em></a></li>
+                                                <li class="dropdown">
+                                                    <a href="#" class="btn btn-icon btn-sm btn-white btn-light dropdown-toggle" data-toggle="dropdown"><em class="icon ni ni-more-h"></em></a>
+                                                    <div class="dropdown-menu dropdown-menu-right">
+                                                        <ul class="link-list-opt no-bdr">
+                                                            <li><a href="#"><em class="icon ni ni-user-add"></em><span>Assign To Member</span></a></li>
+                                                            <li><a href="#"><em class="icon ni ni-archive"></em><span>Move to Archive</span></a></li>
+                                                            <li><a href="#"><em class="icon ni ni-done"></em><span>Mark as Close</span></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <a href="#" class="nk-msg-profile-toggle profile-toggle active"><em class="icon ni ni-arrow-left"></em></a>
+                                    </div><!-- .nk-msg-head -->
+                                    <div class="nk-msg-reply nk-reply" data-simplebar>
+                                        <div class="nk-msg-head py-4 d-lg-none">
+                                            <h4 class="title">Unable to select currency when order</h4>
+                                            <ul class="nk-msg-tags">
+                                                <li><span class="label-tag"><em class="icon ni ni-flag-fill"></em> <span>Technical Problem</span></span></li>
+                                            </ul>
+                                        </div>
+                                        <div class="nk-reply-item">
+                                            <div class="nk-reply-header">
+                                                <div class="user-card">
+                                                    <div class="user-avatar sm bg-blue">
+                                                        <span>AB</span>
+                                                    </div>
+                                                    <div class="user-name">Abu Bin Ishtiyak</div>
+                                                </div>
+                                                <div class="date-time">14 Jan, 2020</div>
+                                            </div>
+                                            <div class="nk-reply-body">
+                                                <div class="nk-reply-entry entry">
+                                                    <p>Hello team,</p>
+                                                    <p>I am facing problem as i can not select currency on buy order page. Can you guys let me know what i am doing doing wrong? Please check attached files.</p>
+                                                    <p>Thank you <br> Ishityak</p>
+                                                </div>
+                                                <div class="attach-files">
+                                                    <ul class="attach-list">
+                                                        <li class="attach-item">
+                                                            <a class="download" href="#"><em class="icon ni ni-img"></em><span>error-show-On-order.jpg</span></a>
                                                         </li>
-                                                        <li class="item">
-                                                            <div class="info">
-                                                                <div class="title">Customers</div>
-                                                                <div class="count">2,327</div>
-                                                            </div>
-                                                            <em class="icon bg-info-dim ni ni-users"></em>
-                                                        </li>
-                                                        <li class="item">
-                                                            <div class="info">
-                                                                <div class="title">Products</div>
-                                                                <div class="count">674</div>
-                                                            </div>
-                                                            <em class="icon bg-pink-dim ni ni-box"></em>
-                                                        </li>
-                                                        <li class="item">
-                                                            <div class="info">
-                                                                <div class="title">Categories</div>
-                                                                <div class="count">68</div>
-                                                            </div>
-                                                            <em class="icon bg-purple-dim ni ni-server"></em>
+                                                        <li class="attach-item">
+                                                            <a class="download" href="#"><em class="icon ni ni-img"></em><span>full-page-error.jpg</span></a>
                                                         </li>
                                                     </ul>
-                                                </div><!-- .card-inner -->
-                                            </div><!-- .card -->
-                                        </div><!-- .col -->
-                                        <div class="col-xxl-8">
-                                            <div class="card card-full">
-                                                <div class="card-inner">
-                                                    <div class="card-title-group">
-                                                        <div class="card-title">
-                                                            <h6 class="title">Recent Orders</h6>
-                                                        </div>
+                                                    <div class="attach-foot">
+                                                        <span class="attach-info">2 files attached</span>
+                                                        <a class="attach-download link" href="#"><em class="icon ni ni-download"></em><span>Download All</span></a>
                                                     </div>
                                                 </div>
-                                                <div class="nk-tb-list mt-n2">
-                                                    <div class="nk-tb-item nk-tb-head">
-                                                        <div class="nk-tb-col"><span>Order No.</span></div>
-                                                        <div class="nk-tb-col tb-col-sm"><span>Customer</span></div>
-                                                        <div class="nk-tb-col tb-col-md"><span>Date</span></div>
-                                                        <div class="nk-tb-col"><span>Amount</span></div>
-                                                        <div class="nk-tb-col"><span class="d-none d-sm-inline">Status</span></div>
+                                            </div>
+                                        </div><!-- .nk-reply-item -->
+                                        <div class="nk-reply-item">
+                                            <div class="nk-reply-header">
+                                                <div class="user-card">
+                                                    <div class="user-avatar sm bg-pink">
+                                                        <span>ST</span>
                                                     </div>
-                                                    <div class="nk-tb-item">
-                                                        <div class="nk-tb-col">
-                                                            <span class="tb-lead"><a href="#">#95954</a></span>
-                                                        </div>
-                                                        <div class="nk-tb-col tb-col-sm">
-                                                            <div class="user-card">
-                                                                <div class="user-avatar sm bg-purple-dim">
-                                                                    <span>AB</span>
-                                                                </div>
-                                                                <div class="user-name">
-                                                                    <span class="tb-lead">Abu Bin Ishtiyak</span>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="nk-tb-col tb-col-md">
-                                                            <span class="tb-sub">02/11/2020</span>
-                                                        </div>
-                                                        <div class="nk-tb-col">
-                                                            <span class="tb-sub tb-amount">4,596.75 <span>USD</span></span>
-                                                        </div>
-                                                        <div class="nk-tb-col">
-                                                            <span class="badge badge-dot badge-dot-xs badge-success">Paid</span>
-                                                        </div>
+                                                    <div class="user-name">Support Team <span>(You)</span></div>
+                                                </div>
+                                                <div class="date-time">14 Jan, 2020</div>
+                                            </div>
+                                            <div class="nk-reply-body">
+                                                <div class="nk-reply-entry entry">
+                                                    <p>Hello Ishtiyak,</p>
+                                                    <p>We are really sorry to hear that, you have face an unexpected experience. Our team urgently look this matter and get back to you asap. </p>
+                                                    <p>Thank you very much. </p>
+                                                </div>
+                                                <div class="nk-reply-from"> Replied by <span>Iliash Hossain</span> at 11:32 AM </div>
+                                            </div>
+                                        </div><!-- .nk-reply-item -->
+                                        <div class="nk-reply-meta">
+                                            <div class="nk-reply-meta-info"><span class="who">Iliash Hossian</span> assigned user: <span class="whom">Saiful Islam</span> at 14 Jan, 2020 at 11:34 AM</div>
+                                        </div><!-- .nk-reply-meta -->
+                                        <div class="nk-reply-item">
+                                            <div class="nk-reply-header">
+                                                <div class="user-card">
+                                                    <div class="user-avatar sm bg-purple">
+                                                        <span>IH</span>
                                                     </div>
-                                                    <div class="nk-tb-item">
-                                                        <div class="nk-tb-col">
-                                                            <span class="tb-lead"><a href="#">#95850</a></span>
-                                                        </div>
-                                                        <div class="nk-tb-col tb-col-sm">
-                                                            <div class="user-card">
-                                                                <div class="user-avatar sm bg-azure-dim">
-                                                                    <span>DE</span>
-                                                                </div>
-                                                                <div class="user-name">
-                                                                    <span class="tb-lead">Desiree Edwards</span>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="nk-tb-col tb-col-md">
-                                                            <span class="tb-sub">02/02/2020</span>
-                                                        </div>
-                                                        <div class="nk-tb-col">
-                                                            <span class="tb-sub tb-amount">596.75 <span>USD</span></span>
-                                                        </div>
-                                                        <div class="nk-tb-col">
-                                                            <span class="badge badge-dot badge-dot-xs badge-danger">Canceled</span>
-                                                        </div>
+                                                    <div class="user-name">Iliash Hossain <span>added a note</span></div>
+                                                </div>
+                                                <div class="date-time">14 Jan, 2020</div>
+                                            </div>
+                                            <div class="nk-reply-body">
+                                                <div class="nk-reply-entry entry note">
+                                                    <p>Devement Team need to check out the issues.</p>
+                                                </div>
+                                            </div>
+                                        </div><!-- .nk-reply-item -->
+                                        <div class="nk-reply-meta">
+                                            <div class="nk-reply-meta-info"><strong>15 January 2020</strong></div>
+                                        </div><!-- .nk-reply-meta -->
+                                        <div class="nk-reply-item">
+                                            <div class="nk-reply-header">
+                                                <div class="user-card">
+                                                    <div class="user-avatar sm bg-pink">
+                                                        <span>ST</span>
                                                     </div>
-                                                    <div class="nk-tb-item">
-                                                        <div class="nk-tb-col">
-                                                            <span class="tb-lead"><a href="#">#95812</a></span>
-                                                        </div>
-                                                        <div class="nk-tb-col tb-col-sm">
-                                                            <div class="user-card">
-                                                                <div class="user-avatar sm bg-warning-dim">
-                                                                    <img src="./images/avatar/b-sm.jpg" alt="">
-                                                                </div>
-                                                                <div class="user-name">
-                                                                    <span class="tb-lead">Blanca Schultz</span>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="nk-tb-col tb-col-md">
-                                                            <span class="tb-sub">02/01/2020</span>
-                                                        </div>
-                                                        <div class="nk-tb-col">
-                                                            <span class="tb-sub tb-amount">199.99 <span>USD</span></span>
-                                                        </div>
-                                                        <div class="nk-tb-col">
-                                                            <span class="badge badge-dot badge-dot-xs badge-success">Paid</span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="nk-tb-item">
-                                                        <div class="nk-tb-col">
-                                                            <span class="tb-lead"><a href="#">#95256</a></span>
-                                                        </div>
-                                                        <div class="nk-tb-col tb-col-sm">
-                                                            <div class="user-card">
-                                                                <div class="user-avatar sm bg-purple-dim">
-                                                                    <span>NL</span>
-                                                                </div>
-                                                                <div class="user-name">
-                                                                    <span class="tb-lead">Naomi Lawrence</span>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="nk-tb-col tb-col-md">
-                                                            <span class="tb-sub">01/29/2020</span>
-                                                        </div>
-                                                        <div class="nk-tb-col">
-                                                            <span class="tb-sub tb-amount">1099.99 <span>USD</span></span>
-                                                        </div>
-                                                        <div class="nk-tb-col">
-                                                            <span class="badge badge-dot badge-dot-xs badge-success">Paid</span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="nk-tb-item">
-                                                        <div class="nk-tb-col">
-                                                            <span class="tb-lead"><a href="#">#95135</a></span>
-                                                        </div>
-                                                        <div class="nk-tb-col tb-col-sm">
-                                                            <div class="user-card">
-                                                                <div class="user-avatar sm bg-success-dim">
-                                                                    <span>CH</span>
-                                                                </div>
-                                                                <div class="user-name">
-                                                                    <span class="tb-lead">Cassandra Hogan</span>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="nk-tb-col tb-col-md">
-                                                            <span class="tb-sub">01/29/2020</span>
-                                                        </div>
-                                                        <div class="nk-tb-col">
-                                                            <span class="tb-sub tb-amount">1099.99 <span>USD</span></span>
-                                                        </div>
-                                                        <div class="nk-tb-col">
-                                                            <span class="badge badge-dot badge-dot-xs badge-warning">Due</span>
-                                                        </div>
+                                                    <div class="user-name">Support Team <span>(You)</span></div>
+                                                </div>
+                                                <div class="date-time">15 Jan, 2020</div>
+                                            </div>
+                                            <div class="nk-reply-body">
+                                                <div class="nk-reply-entry entry">
+                                                    <p>Hello Ishtiyak,</p>
+                                                    <p>Thanks for waiting for us. Our team solved the issues. So check now on our website. Hopefuly you can order now.</p>
+                                                    <p>Thank you very much once again.</p>
+                                                </div>
+                                                <div class="nk-reply-from"> Replied by <span>Noor Parvez</span> at 11:32 AM </div>
+                                            </div>
+                                        </div><!-- .nk-reply-item -->
+                                        <div class="nk-reply-form">
+                                            <div class="nk-reply-form-header">
+                                                <ul class="nav nav-tabs-s2 nav-tabs nav-tabs-sm">
+                                                    <li class="nav-item">
+                                                        <a class="nav-link active" data-toggle="tab" href="#reply-form">Reply</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" data-toggle="tab" href="#note-form">Private Note</a>
+                                                    </li>
+                                                </ul>
+                                                <div class="nk-reply-form-title">
+                                                    <div class="title">Reply as:</div>
+                                                    <div class="user-avatar xs bg-purple">
+                                                        <span>IH</span>
                                                     </div>
                                                 </div>
-                                            </div><!-- .card -->
-                                        </div>
-                                        <div class="col-xxl-4 col-md-8 col-lg-6">
-                                            <div class="card h-100">
-                                                <div class="card-inner">
-                                                    <div class="card-title-group mb-2">
-                                                        <div class="card-title">
-                                                            <h6 class="title">Top products</h6>
+                                            </div>
+                                            <div class="tab-content">
+                                                <div class="tab-pane active" id="reply-form">
+                                                    <div class="nk-reply-form-editor">
+                                                        <div class="nk-reply-form-field">
+                                                            <textarea class="form-control form-control-simple no-resize" placeholder="Hello"></textarea>
                                                         </div>
-                                                        <div class="card-tools">
+                                                        <div class="nk-reply-form-tools">
+                                                            <ul class="nk-reply-form-actions g-1">
+                                                                <li class="mr-2"><button class="btn btn-primary" type="submit">Reply</button></li>
+                                                                <li>
+                                                                    <div class="dropdown">
+                                                                        <a class="btn btn-icon btn-sm btn-tooltip" data-toggle="dropdown" title="Templates" href="#"><em class="icon ni ni-hash"></em></a>
+                                                                        <div class="dropdown-menu">
+                                                                            <ul class="link-list-opt no-bdr link-list-template">
+                                                                                <li class="opt-head"><span>Quick Insert</span></li>
+                                                                                <li><a href="#"><span>Thank you message</span></a></li>
+                                                                                <li><a href="#"><span>Your issues solved</span></a></li>
+                                                                                <li><a href="#"><span>Thank you message</span></a></li>
+                                                                                <li class="divider">
+                                                                                <li><a href="#"><em class="icon ni ni-file-plus"></em><span>Save as Template</span></a></li>
+                                                                                <li><a href="#"><em class="icon ni ni-notes-alt"></em><span>Manage Template</span></a></li>
+                                                                            </ul>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <a class="btn btn-icon btn-sm" data-toggle="tooltip" data-placement="top" title="Upload Attachment" href="#"><em class="icon ni ni-clip-v"></em></a>
+                                                                </li>
+                                                                <li>
+                                                                    <a class="btn btn-icon btn-sm" data-toggle="tooltip" data-placement="top" title="Insert Emoji" href="#"><em class="icon ni ni-happy"></em></a>
+                                                                </li>
+                                                                <li>
+                                                                    <a class="btn btn-icon btn-sm" data-toggle="tooltip" data-placement="top" title="Upload Images" href="#"><em class="icon ni ni-img"></em></a>
+                                                                </li>
+                                                            </ul>
                                                             <div class="dropdown">
-                                                                <a href="#" class="dropdown-toggle link link-light link-sm dropdown-indicator" data-toggle="dropdown">Weekly</a>
-                                                                <div class="dropdown-menu dropdown-menu-sm dropdown-menu-right">
+                                                                <a href="#" class="dropdown-toggle btn-trigger btn btn-icon mr-n2" data-toggle="dropdown"><em class="icon ni ni-more-v"></em></a>
+                                                                <div class="dropdown-menu dropdown-menu-right">
                                                                     <ul class="link-list-opt no-bdr">
-                                                                        <li><a href="#"><span>Daily</span></a></li>
-                                                                        <li><a href="#" class="active"><span>Weekly</span></a></li>
-                                                                        <li><a href="#"><span>Monthly</span></a></li>
+                                                                        <li><a href="#"><span>Another Option</span></a></li>
+                                                                        <li><a href="#"><span>More Option</span></a></li>
                                                                     </ul>
                                                                 </div>
                                                             </div>
+                                                        </div><!-- .nk-reply-form-tools -->
+                                                    </div><!-- .nk-reply-form-editor -->
+                                                </div>
+                                                <div class="tab-pane" id="note-form">
+                                                    <div class="nk-reply-form-editor">
+                                                        <div class="nk-reply-form-field">
+                                                            <textarea class="form-control form-control-simple no-resize" placeholder="Type your private note, that only visible to internal team."></textarea>
+                                                        </div>
+                                                        <div class="nk-reply-form-tools">
+                                                            <ul class="nk-reply-form-actions g-1">
+                                                                <li class="mr-2"><button class="btn btn-primary" type="submit">Add Note</button></li>
+                                                                <li>
+                                                                    <a class="btn btn-icon btn-sm" data-toggle="tooltip" data-placement="top" title="Upload Attachment" href="#"><em class="icon ni ni-clip-v"></em></a>
+                                                                </li>
+                                                            </ul>
+                                                            <div class="dropdown">
+                                                                <a href="#" class="dropdown-toggle btn-trigger btn btn-icon mr-n2" data-toggle="dropdown"><em class="icon ni ni-more-v"></em></a>
+                                                                <div class="dropdown-menu dropdown-menu-right">
+                                                                    <ul class="link-list-opt no-bdr">
+                                                                        <li><a href="#"><span>Another Option</span></a></li>
+                                                                        <li><a href="#"><span>More Option</span></a></li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div><!-- .nk-reply-form-tools -->
+                                                    </div><!-- .nk-reply-form-editor -->
+                                                </div>
+                                            </div>
+                                        </div><!-- .nk-reply-form -->
+                                    </div><!-- .nk-reply -->
+                                    <div class="nk-msg-profile visible" data-simplebar>
+                                        <div class="card">
+                                            <div class="card-inner-group">
+                                                <div class="card-inner">
+                                                    <div class="user-card user-card-s2 mb-2">
+                                                        <div class="user-avatar md bg-primary">
+                                                            <span>AB</span>
+                                                        </div>
+                                                        <div class="user-info">
+                                                            <h5>Abu Bin Ishtiyak</h5>
+                                                            <span class="sub-text">Customer</span>
+                                                        </div>
+                                                        <div class="user-card-menu dropdown">
+                                                            <a href="#" class="btn btn-icon btn-sm btn-trigger dropdown-toggle" data-toggle="dropdown"><em class="icon ni ni-more-h"></em></a>
+                                                            <div class="dropdown-menu dropdown-menu-right">
+                                                                <ul class="link-list-opt no-bdr">
+                                                                    <li><a href="#"><em class="icon ni ni-eye"></em><span>View Profile</span></a></li>
+                                                                    <li><a href="#"><em class="icon ni ni-na"></em><span>Ban From System</span></a></li>
+                                                                    <li><a href="#"><em class="icon ni ni-repeat"></em><span>View Orders</span></a></li>
+                                                                </ul>
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                    <ul class="nk-top-products">
-                                                        <li class="item">
-                                                            <div class="thumb">
-                                                                <img src="./images/product/a.png" alt="">
+                                                    <div class="row text-center g-1">
+                                                        <div class="col-4">
+                                                            <div class="profile-stats">
+                                                                <span class="amount">23</span>
+                                                                <span class="sub-text">Total Order</span>
                                                             </div>
-                                                            <div class="info">
-                                                                <div class="title">Pink Fitness Tracker</div>
-                                                                <div class="price">$99.00</div>
+                                                        </div>
+                                                        <div class="col-4">
+                                                            <div class="profile-stats">
+                                                                <span class="amount">20</span>
+                                                                <span class="sub-text">Complete</span>
                                                             </div>
-                                                            <div class="total">
-                                                                <div class="amount">$990.00</div>
-                                                                <div class="count">10 Sold</div>
+                                                        </div>
+                                                        <div class="col-4">
+                                                            <div class="profile-stats">
+                                                                <span class="amount">3</span>
+                                                                <span class="sub-text">Progress</span>
                                                             </div>
-                                                        </li>
-                                                        <li class="item">
-                                                            <div class="thumb">
-                                                                <img src="./images/product/b.png" alt="">
-                                                            </div>
-                                                            <div class="info">
-                                                                <div class="title">Purple Smartwatch</div>
-                                                                <div class="price">$99.00</div>
-                                                            </div>
-                                                            <div class="total">
-                                                                <div class="amount">$990.00</div>
-                                                                <div class="count">10 Sold</div>
-                                                            </div>
-                                                        </li>
-                                                        <li class="item">
-                                                            <div class="thumb">
-                                                                <img src="./images/product/c.png" alt="">
-                                                            </div>
-                                                            <div class="info">
-                                                                <div class="title">Black Mi Band Smartwatch</div>
-                                                                <div class="price">$99.00</div>
-                                                            </div>
-                                                            <div class="total">
-                                                                <div class="amount">$990.00</div>
-                                                                <div class="count">10 Sold</div>
-                                                            </div>
-                                                        </li>
-                                                        <li class="item">
-                                                            <div class="thumb">
-                                                                <img src="./images/product/d.png" alt="">
-                                                            </div>
-                                                            <div class="info">
-                                                                <div class="title">Black Headphones</div>
-                                                                <div class="price">$99.00</div>
-                                                            </div>
-                                                            <div class="total">
-                                                                <div class="amount">$990.00</div>
-                                                                <div class="count">10 Sold</div>
-                                                            </div>
-                                                        </li>
-                                                        <li class="item">
-                                                            <div class="thumb">
-                                                                <img src="./images/product/e.png" alt="">
-                                                            </div>
-                                                            <div class="info">
-                                                                <div class="title">iPhone 7 Headphones</div>
-                                                                <div class="price">$99.00</div>
-                                                            </div>
-                                                            <div class="total">
-                                                                <div class="amount">$990.00</div>
-                                                                <div class="count">10 Sold</div>
-                                                            </div>
-                                                        </li>
-                                                    </ul>
+                                                        </div>
+                                                    </div>
                                                 </div><!-- .card-inner -->
-                                            </div><!-- .card -->
-                                        </div><!-- .col -->
-                                    </div><!-- .row -->
-                                </div><!-- .nk-block -->
-                            </div>
+                                                <div class="card-inner">
+                                                    <div class="aside-wg">
+                                                        <h6 class="overline-title-alt mb-2">User Information</h6>
+                                                        <ul class="user-contacts">
+                                                            <li>
+                                                                <em class="icon ni ni-mail"></em><span>info@softnio.com</span>
+                                                            </li>
+                                                            <li>
+                                                                <em class="icon ni ni-call"></em><span>+938392939</span>
+                                                            </li>
+                                                            <li>
+                                                                <em class="icon ni ni-map-pin"></em><span>1134 Ridder Park Road <br>San Fransisco, CA 94851</span>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="aside-wg">
+                                                        <h6 class="overline-title-alt mb-2">Additional</h6>
+                                                        <div class="row gx-1 gy-3">
+                                                            <div class="col-6">
+                                                                <span class="sub-text">Ref ID: </span>
+                                                                <span>TID-049583</span>
+                                                            </div>
+                                                            <div class="col-6">
+                                                                <span class="sub-text">Requested:</span>
+                                                                <span>Abu Bin Ishtiak</span>
+                                                            </div>
+                                                            <div class="col-6">
+                                                                <span class="sub-text">Status:</span>
+                                                                <span class="lead-text text-success">Open</span>
+                                                            </div>
+                                                            <div class="col-6">
+                                                                <span class="sub-text">Last Reply:</span>
+                                                                <span>Abu Bin Ishtiak</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="aside-wg">
+                                                        <h6 class="overline-title-alt mb-2">Assigned Account</h6>
+                                                        <ul class="align-center g-2">
+                                                            <li>
+                                                                <div class="user-avatar bg-purple">
+                                                                    <span>IH</span>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="user-avatar bg-pink">
+                                                                    <span>ST</span>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="user-avatar bg-gray">
+                                                                    <span>SI</span>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div><!-- .card-inner -->
+                                            </div>
+                                        </div>
+                                    </div><!-- .nk-msg-profile -->
+                                </div><!-- .nk-msg-body -->
+                            </div><!-- .nk-msg -->
                         </div>
                     </div>
                 </div>
@@ -1190,7 +1328,7 @@
     <!-- JavaScript -->
     <script src="./assets/js/bundle.js?ver=1.9.2"></script>
     <script src="./assets/js/scripts.js?ver=1.9.2"></script>
-    <script src="./assets/js/charts/chart-ecommerce.js?ver=1.9.2"></script>
+    <script src="./assets/js/apps/messages.js?ver=1.9.2"></script>
 </body>
 
 </html>

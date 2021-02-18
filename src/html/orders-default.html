@@ -10,7 +10,7 @@
     <!-- Fav Icon  -->
     <link rel="shortcut icon" href="./images/favicon.png">
     <!-- Page Title  -->
-    <title>Default Dashboard | DashLite Admin Template</title>
+    <title>General Dashboard | DashLite Admin Template</title>
     <!-- StyleSheets  -->
     <link rel="stylesheet" href="./assets/css/dashlite.css?ver=1.9.2">
     <link id="skin-default" rel="stylesheet" href="./assets/css/theme.css?ver=1.9.2">
@@ -688,7 +688,7 @@
                                 <div class="nk-block-head nk-block-head-sm">
                                     <div class="nk-block-between">
                                         <div class="nk-block-head-content">
-                                            <h3 class="nk-block-title page-title">Dashboard</h3>
+                                            <h3 class="nk-block-title page-title">Orders</h3>
                                         </div><!-- .nk-block-head-content -->
                                         <div class="nk-block-head-content">
                                             <div class="toggle-wrap nk-block-tools-toggle">
@@ -696,18 +696,29 @@
                                                 <div class="toggle-expand-content" data-content="pageMenu">
                                                     <ul class="nk-block-tools g-3">
                                                         <li>
+                                                            <div class="form-control-wrap">
+                                                                <div class="form-icon form-icon-right">
+                                                                    <em class="icon ni ni-search"></em>
+                                                                </div>
+                                                                <input type="text" class="form-control" id="default-04" placeholder="Quick search by id">
+                                                            </div>
+                                                        </li>
+                                                        <li>
                                                             <div class="drodown">
-                                                                <a href="#" class="dropdown-toggle btn btn-white btn-dim btn-outline-light" data-toggle="dropdown"><em class="d-none d-sm-inline icon ni ni-calender-date"></em><span><span class="d-none d-md-inline">Last</span> 30 Days</span><em class="dd-indc icon ni ni-chevron-right"></em></a>
+                                                                <a href="#" class="dropdown-toggle dropdown-indicator btn btn-outline-light btn-white" data-toggle="dropdown">Status</a>
                                                                 <div class="dropdown-menu dropdown-menu-right">
                                                                     <ul class="link-list-opt no-bdr">
-                                                                        <li><a href="#"><span>Last 30 Days</span></a></li>
-                                                                        <li><a href="#"><span>Last 6 Months</span></a></li>
-                                                                        <li><a href="#"><span>Last 1 Years</span></a></li>
+                                                                        <li><a href="#"><span>On Hold</span></a></li>
+                                                                        <li><a href="#"><span>Delevired</span></a></li>
+                                                                        <li><a href="#"><span>Rejected</span></a></li>
                                                                     </ul>
                                                                 </div>
                                                             </div>
                                                         </li>
-                                                        <li class="nk-block-tools-opt"><a href="#" class="btn btn-primary"><em class="icon ni ni-reports"></em><span>Reports</span></a></li>
+                                                        <li class="nk-block-tools-opt">
+                                                            <a href="#" class="btn btn-icon btn-primary d-md-none"><em class="icon ni ni-plus"></em></a>
+                                                            <a href="#" class="btn btn-primary d-none d-md-inline-flex"><em class="icon ni ni-plus"></em><span>Add Order</span></a>
+                                                        </li>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -715,449 +726,585 @@
                                     </div><!-- .nk-block-between -->
                                 </div><!-- .nk-block-head -->
                                 <div class="nk-block">
-                                    <div class="row g-gs">
-                                        <div class="col-xxl-3 col-sm-6">
-                                            <div class="card">
-                                                <div class="nk-ecwg nk-ecwg6">
-                                                    <div class="card-inner">
-                                                        <div class="card-title-group">
-                                                            <div class="card-title">
-                                                                <h6 class="title">Today Orders</h6>
-                                                            </div>
-                                                        </div>
-                                                        <div class="data">
-                                                            <div class="data-group">
-                                                                <div class="amount">1,945</div>
-                                                                <div class="nk-ecwg6-ck">
-                                                                    <canvas class="ecommerce-line-chart-s3" id="todayOrders"></canvas>
-                                                                </div>
-                                                            </div>
-                                                            <div class="info"><span class="change up text-danger"><em class="icon ni ni-arrow-long-up"></em>4.63%</span><span> vs. last week</span></div>
-                                                        </div>
-                                                    </div><!-- .card-inner -->
-                                                </div><!-- .nk-ecwg -->
-                                            </div><!-- .card -->
-                                        </div><!-- .col -->
-                                        <div class="col-xxl-3 col-sm-6">
-                                            <div class="card">
-                                                <div class="nk-ecwg nk-ecwg6">
-                                                    <div class="card-inner">
-                                                        <div class="card-title-group">
-                                                            <div class="card-title">
-                                                                <h6 class="title">Today Revenue</h6>
-                                                            </div>
-                                                        </div>
-                                                        <div class="data">
-                                                            <div class="data-group">
-                                                                <div class="amount">$2,338</div>
-                                                                <div class="nk-ecwg6-ck">
-                                                                    <canvas class="ecommerce-line-chart-s3" id="todayRevenue"></canvas>
-                                                                </div>
-                                                            </div>
-                                                            <div class="info"><span class="change down text-danger"><em class="icon ni ni-arrow-long-down"></em>2.34%</span><span> vs. last week</span></div>
-                                                        </div>
-                                                    </div><!-- .card-inner -->
-                                                </div><!-- .nk-ecwg -->
-                                            </div><!-- .card -->
-                                        </div><!-- .col -->
-                                        <div class="col-xxl-3 col-sm-6">
-                                            <div class="card">
-                                                <div class="nk-ecwg nk-ecwg6">
-                                                    <div class="card-inner">
-                                                        <div class="card-title-group">
-                                                            <div class="card-title">
-                                                                <h6 class="title">Today Customers</h6>
-                                                            </div>
-                                                        </div>
-                                                        <div class="data">
-                                                            <div class="data-group">
-                                                                <div class="amount">847</div>
-                                                                <div class="nk-ecwg6-ck">
-                                                                    <canvas class="ecommerce-line-chart-s3" id="todayCustomers"></canvas>
-                                                                </div>
-                                                            </div>
-                                                            <div class="info"><span class="change up text-danger"><em class="icon ni ni-arrow-long-up"></em>4.63%</span><span> vs. last week</span></div>
-                                                        </div>
-                                                    </div><!-- .card-inner -->
-                                                </div><!-- .nk-ecwg -->
-                                            </div><!-- .card -->
-                                        </div><!-- .col -->
-                                        <div class="col-xxl-3 col-sm-6">
-                                            <div class="card">
-                                                <div class="nk-ecwg nk-ecwg6">
-                                                    <div class="card-inner">
-                                                        <div class="card-title-group">
-                                                            <div class="card-title">
-                                                                <h6 class="title">Today Visitors</h6>
-                                                            </div>
-                                                        </div>
-                                                        <div class="data">
-                                                            <div class="data-group">
-                                                                <div class="amount">23,485</div>
-                                                                <div class="nk-ecwg6-ck">
-                                                                    <canvas class="ecommerce-line-chart-s3" id="todayVisitors"></canvas>
-                                                                </div>
-                                                            </div>
-                                                            <div class="info"><span class="change down text-danger"><em class="icon ni ni-arrow-long-down"></em>2.34%</span><span> vs. last week</span></div>
-                                                        </div>
-                                                    </div><!-- .card-inner -->
-                                                </div><!-- .nk-ecwg -->
-                                            </div><!-- .card -->
-                                        </div><!-- .col -->
-                                        <div class="col-xxl-6">
-                                            <div class="card card-full">
-                                                <div class="nk-ecwg nk-ecwg8 h-100">
-                                                    <div class="card-inner">
-                                                        <div class="card-title-group mb-3">
-                                                            <div class="card-title">
-                                                                <h6 class="title">Sales Statistics</h6>
-                                                            </div>
-                                                            <div class="card-tools">
-                                                                <div class="dropdown">
-                                                                    <a href="#" class="dropdown-toggle link link-light link-sm dropdown-indicator" data-toggle="dropdown">Weekly</a>
-                                                                    <div class="dropdown-menu dropdown-menu-sm dropdown-menu-right">
-                                                                        <ul class="link-list-opt no-bdr">
-                                                                            <li><a href="#"><span>Daily</span></a></li>
-                                                                            <li><a href="#" class="active"><span>Weekly</span></a></li>
-                                                                            <li><a href="#"><span>Monthly</span></a></li>
-                                                                        </ul>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <ul class="nk-ecwg8-legends">
-                                                            <li>
-                                                                <div class="title">
-                                                                    <span class="dot dot-lg sq" data-bg="#6576ff"></span>
-                                                                    <span>Total Order</span>
-                                                                </div>
-                                                            </li>
-                                                            <li>
-                                                                <div class="title">
-                                                                    <span class="dot dot-lg sq" data-bg="#eb6459"></span>
-                                                                    <span>Canceled Order</span>
-                                                                </div>
-                                                            </li>
-                                                        </ul>
-                                                        <div class="nk-ecwg8-ck">
-                                                            <canvas class="ecommerce-line-chart-s4" id="salesStatistics"></canvas>
-                                                        </div>
-                                                        <div class="chart-label-group pl-5">
-                                                            <div class="chart-label">01 Jul, 2020</div>
-                                                            <div class="chart-label">30 Jul, 2020</div>
-                                                        </div>
-                                                    </div><!-- .card-inner -->
+                                    <div class="nk-tb-list is-separate is-medium mb-3">
+                                        <div class="nk-tb-item nk-tb-head">
+                                            <div class="nk-tb-col nk-tb-col-check">
+                                                <div class="custom-control custom-control-sm custom-checkbox notext">
+                                                    <input type="checkbox" class="custom-control-input" id="uid">
+                                                    <label class="custom-control-label" for="uid"></label>
                                                 </div>
-                                            </div><!-- .card -->
-                                        </div><!-- .col -->
-                                        <div class="col-xxl-3 col-md-6">
-                                            <div class="card card-full overflow-hidden">
-                                                <div class="nk-ecwg nk-ecwg7 h-100">
-                                                    <div class="card-inner flex-grow-1">
-                                                        <div class="card-title-group mb-4">
-                                                            <div class="card-title">
-                                                                <h6 class="title">Order Statistics</h6>
+                                            </div>
+                                            <div class="nk-tb-col"><span>Order</span></div>
+                                            <div class="nk-tb-col tb-col-md"><span>Date</span></div>
+                                            <div class="nk-tb-col"><span class="d-none d-mb-block">Status</span></div>
+                                            <div class="nk-tb-col tb-col-sm"><span>Customer</span></div>
+                                            <div class="nk-tb-col tb-col-md"><span>Purchased</span></div>
+                                            <div class="nk-tb-col"><span>Total</span></div>
+                                            <div class="nk-tb-col nk-tb-col-tools">
+                                                <ul class="nk-tb-actions gx-1 my-n1">
+                                                    <li>
+                                                        <div class="drodown">
+                                                            <a href="#" class="dropdown-toggle btn btn-icon btn-trigger mr-n1" data-toggle="dropdown"><em class="icon ni ni-more-h"></em></a>
+                                                            <div class="dropdown-menu dropdown-menu-right">
+                                                                <ul class="link-list-opt no-bdr">
+                                                                    <li><a href="#"><em class="icon ni ni-edit"></em><span>Update Status</span></a></li>
+                                                                    <li><a href="#"><em class="icon ni ni-truck"></em><span>Mark as Delivered</span></a></li>
+                                                                    <li><a href="#"><em class="icon ni ni-money"></em><span>Mark as Paid</span></a></li>
+                                                                    <li><a href="#"><em class="icon ni ni-report-profit"></em><span>Send Invoice</span></a></li>
+                                                                    <li><a href="#"><em class="icon ni ni-trash"></em><span>Remove Orders</span></a></li>
+                                                                </ul>
                                                             </div>
                                                         </div>
-                                                        <div class="nk-ecwg7-ck">
-                                                            <canvas class="ecommerce-doughnut-s1" id="orderStatistics"></canvas>
-                                                        </div>
-                                                        <ul class="nk-ecwg7-legends">
-                                                            <li>
-                                                                <div class="title">
-                                                                    <span class="dot dot-lg sq" data-bg="#816bff"></span>
-                                                                    <span>Completed</span>
-                                                                </div>
-                                                            </li>
-                                                            <li>
-                                                                <div class="title">
-                                                                    <span class="dot dot-lg sq" data-bg="#13c9f2"></span>
-                                                                    <span>Processing</span>
-                                                                </div>
-                                                            </li>
-                                                            <li>
-                                                                <div class="title">
-                                                                    <span class="dot dot-lg sq" data-bg="#ff82b7"></span>
-                                                                    <span>Canclled</span>
-                                                                </div>
-                                                            </li>
-                                                        </ul>
-                                                    </div><!-- .card-inner -->
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div><!-- .nk-tb-item -->
+                                        <div class="nk-tb-item">
+                                            <div class="nk-tb-col nk-tb-col-check">
+                                                <div class="custom-control custom-control-sm custom-checkbox notext">
+                                                    <input type="checkbox" class="custom-control-input" id="uid1">
+                                                    <label class="custom-control-label" for="uid1"></label>
                                                 </div>
-                                            </div><!-- .card -->
-                                        </div><!-- .col -->
-                                        <div class="col-xxl-3 col-md-6">
-                                            <div class="card h-100">
-                                                <div class="card-inner">
-                                                    <div class="card-title-group mb-2">
-                                                        <div class="card-title">
-                                                            <h6 class="title">Store Statistics</h6>
+                                            </div>
+                                            <div class="nk-tb-col">
+                                                <span class="tb-lead"><a href="#">#95954</a></span>
+                                            </div>
+                                            <div class="nk-tb-col tb-col-md">
+                                                <span class="tb-sub">Jun 4, 2020</span>
+                                            </div>
+                                            <div class="nk-tb-col">
+                                                <span class="dot bg-warning d-mb-none"></span>
+                                                <span class="badge badge-sm badge-dot has-bg badge-warning d-none d-mb-inline-flex">On Hold</span>
+                                            </div>
+                                            <div class="nk-tb-col tb-col-sm">
+                                                <span class="tb-sub">Arnold Armstrong</span>
+                                            </div>
+                                            <div class="nk-tb-col tb-col-md">
+                                                <span class="tb-sub text-primary">3 Items</span>
+                                            </div>
+                                            <div class="nk-tb-col">
+                                                <span class="tb-lead">$ 249.75</span>
+                                            </div>
+                                            <div class="nk-tb-col nk-tb-col-tools">
+                                                <ul class="nk-tb-actions gx-1">
+                                                    <li class="nk-tb-action-hidden"><a href="#" class="btn btn-icon btn-trigger btn-tooltip" title="Mark as Delivered" data-toggle="dropdown">
+                                                            <em class="icon ni ni-truck"></em></a></li>
+                                                    <li class="nk-tb-action-hidden"><a href="#" class="btn btn-icon btn-trigger btn-tooltip" title="View Order" data-toggle="dropdown">
+                                                            <em class="icon ni ni-eye"></em></a></li>
+                                                    <li>
+                                                        <div class="drodown mr-n1">
+                                                            <a href="#" class="dropdown-toggle btn btn-icon btn-trigger" data-toggle="dropdown"><em class="icon ni ni-more-h"></em></a>
+                                                            <div class="dropdown-menu dropdown-menu-right">
+                                                                <ul class="link-list-opt no-bdr">
+                                                                    <li><a href="#"><em class="icon ni ni-eye"></em><span>Order Details</span></a></li>
+                                                                    <li><a href="#"><em class="icon ni ni-truck"></em><span>Mark as Delivered</span></a></li>
+                                                                    <li><a href="#"><em class="icon ni ni-money"></em><span>Mark as Paid</span></a></li>
+                                                                    <li><a href="#"><em class="icon ni ni-report-profit"></em><span>Send Invoice</span></a></li>
+                                                                    <li><a href="#"><em class="icon ni ni-trash"></em><span>Remove Order</span></a></li>
+                                                                </ul>
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                    <ul class="nk-store-statistics">
-                                                        <li class="item">
-                                                            <div class="info">
-                                                                <div class="title">Orders</div>
-                                                                <div class="count">1,795</div>
-                                                            </div>
-                                                            <em class="icon bg-primary-dim ni ni-bag"></em>
-                                                        </li>
-                                                        <li class="item">
-                                                            <div class="info">
-                                                                <div class="title">Customers</div>
-                                                                <div class="count">2,327</div>
-                                                            </div>
-                                                            <em class="icon bg-info-dim ni ni-users"></em>
-                                                        </li>
-                                                        <li class="item">
-                                                            <div class="info">
-                                                                <div class="title">Products</div>
-                                                                <div class="count">674</div>
-                                                            </div>
-                                                            <em class="icon bg-pink-dim ni ni-box"></em>
-                                                        </li>
-                                                        <li class="item">
-                                                            <div class="info">
-                                                                <div class="title">Categories</div>
-                                                                <div class="count">68</div>
-                                                            </div>
-                                                            <em class="icon bg-purple-dim ni ni-server"></em>
-                                                        </li>
-                                                    </ul>
-                                                </div><!-- .card-inner -->
-                                            </div><!-- .card -->
-                                        </div><!-- .col -->
-                                        <div class="col-xxl-8">
-                                            <div class="card card-full">
-                                                <div class="card-inner">
-                                                    <div class="card-title-group">
-                                                        <div class="card-title">
-                                                            <h6 class="title">Recent Orders</h6>
-                                                        </div>
-                                                    </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div><!-- .nk-tb-item -->
+                                        <div class="nk-tb-item">
+                                            <div class="nk-tb-col nk-tb-col-check">
+                                                <div class="custom-control custom-control-sm custom-checkbox notext">
+                                                    <input type="checkbox" class="custom-control-input" id="uid2">
+                                                    <label class="custom-control-label" for="uid2"></label>
                                                 </div>
-                                                <div class="nk-tb-list mt-n2">
-                                                    <div class="nk-tb-item nk-tb-head">
-                                                        <div class="nk-tb-col"><span>Order No.</span></div>
-                                                        <div class="nk-tb-col tb-col-sm"><span>Customer</span></div>
-                                                        <div class="nk-tb-col tb-col-md"><span>Date</span></div>
-                                                        <div class="nk-tb-col"><span>Amount</span></div>
-                                                        <div class="nk-tb-col"><span class="d-none d-sm-inline">Status</span></div>
-                                                    </div>
-                                                    <div class="nk-tb-item">
-                                                        <div class="nk-tb-col">
-                                                            <span class="tb-lead"><a href="#">#95954</a></span>
-                                                        </div>
-                                                        <div class="nk-tb-col tb-col-sm">
-                                                            <div class="user-card">
-                                                                <div class="user-avatar sm bg-purple-dim">
-                                                                    <span>AB</span>
-                                                                </div>
-                                                                <div class="user-name">
-                                                                    <span class="tb-lead">Abu Bin Ishtiyak</span>
-                                                                </div>
+                                            </div>
+                                            <div class="nk-tb-col">
+                                                <span class="tb-lead"><a href="#">#95961</a></span>
+                                            </div>
+                                            <div class="nk-tb-col tb-col-md">
+                                                <span class="tb-sub">Jun 3, 2020</span>
+                                            </div>
+                                            <div class="nk-tb-col">
+                                                <span class="dot bg-success d-mb-none"></span>
+                                                <span class="badge badge-sm badge-dot has-bg badge-success d-none d-mb-inline-flex">Delivered</span>
+                                            </div>
+                                            <div class="nk-tb-col tb-col-sm">
+                                                <span class="tb-sub">Jean Douglas</span>
+                                            </div>
+                                            <div class="nk-tb-col tb-col-md">
+                                                <span class="tb-sub text-primary">Pink Fitness Tracker</span>
+                                            </div>
+                                            <div class="nk-tb-col">
+                                                <span class="tb-lead">$ 99.49</span>
+                                            </div>
+                                            <div class="nk-tb-col nk-tb-col-tools">
+                                                <ul class="nk-tb-actions gx-1">
+                                                    <li class="nk-tb-action-hidden"><a href="#" class="btn btn-icon btn-trigger btn-tooltip" title="Mark as Delivered" data-toggle="dropdown">
+                                                            <em class="icon ni ni-truck"></em></a></li>
+                                                    <li class="nk-tb-action-hidden"><a href="#" class="btn btn-icon btn-trigger btn-tooltip" title="View Order" data-toggle="dropdown">
+                                                            <em class="icon ni ni-eye"></em></a></li>
+                                                    <li>
+                                                    <li>
+                                                        <div class="drodown mr-n1">
+                                                            <a href="#" class="dropdown-toggle btn btn-icon btn-trigger" data-toggle="dropdown"><em class="icon ni ni-more-h"></em></a>
+                                                            <div class="dropdown-menu dropdown-menu-right">
+                                                                <ul class="link-list-opt no-bdr">
+                                                                    <li><a href="#"><em class="icon ni ni-eye"></em><span>Order Details</span></a></li>
+                                                                    <li><a href="#"><em class="icon ni ni-truck"></em><span>Mark as Delivered</span></a></li>
+                                                                    <li><a href="#"><em class="icon ni ni-money"></em><span>Mark as Paid</span></a></li>
+                                                                    <li><a href="#"><em class="icon ni ni-report-profit"></em><span>Send Invoice</span></a></li>
+                                                                    <li><a href="#"><em class="icon ni ni-trash"></em><span>Remove Order</span></a></li>
+                                                                </ul>
                                                             </div>
                                                         </div>
-                                                        <div class="nk-tb-col tb-col-md">
-                                                            <span class="tb-sub">02/11/2020</span>
-                                                        </div>
-                                                        <div class="nk-tb-col">
-                                                            <span class="tb-sub tb-amount">4,596.75 <span>USD</span></span>
-                                                        </div>
-                                                        <div class="nk-tb-col">
-                                                            <span class="badge badge-dot badge-dot-xs badge-success">Paid</span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="nk-tb-item">
-                                                        <div class="nk-tb-col">
-                                                            <span class="tb-lead"><a href="#">#95850</a></span>
-                                                        </div>
-                                                        <div class="nk-tb-col tb-col-sm">
-                                                            <div class="user-card">
-                                                                <div class="user-avatar sm bg-azure-dim">
-                                                                    <span>DE</span>
-                                                                </div>
-                                                                <div class="user-name">
-                                                                    <span class="tb-lead">Desiree Edwards</span>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="nk-tb-col tb-col-md">
-                                                            <span class="tb-sub">02/02/2020</span>
-                                                        </div>
-                                                        <div class="nk-tb-col">
-                                                            <span class="tb-sub tb-amount">596.75 <span>USD</span></span>
-                                                        </div>
-                                                        <div class="nk-tb-col">
-                                                            <span class="badge badge-dot badge-dot-xs badge-danger">Canceled</span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="nk-tb-item">
-                                                        <div class="nk-tb-col">
-                                                            <span class="tb-lead"><a href="#">#95812</a></span>
-                                                        </div>
-                                                        <div class="nk-tb-col tb-col-sm">
-                                                            <div class="user-card">
-                                                                <div class="user-avatar sm bg-warning-dim">
-                                                                    <img src="./images/avatar/b-sm.jpg" alt="">
-                                                                </div>
-                                                                <div class="user-name">
-                                                                    <span class="tb-lead">Blanca Schultz</span>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="nk-tb-col tb-col-md">
-                                                            <span class="tb-sub">02/01/2020</span>
-                                                        </div>
-                                                        <div class="nk-tb-col">
-                                                            <span class="tb-sub tb-amount">199.99 <span>USD</span></span>
-                                                        </div>
-                                                        <div class="nk-tb-col">
-                                                            <span class="badge badge-dot badge-dot-xs badge-success">Paid</span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="nk-tb-item">
-                                                        <div class="nk-tb-col">
-                                                            <span class="tb-lead"><a href="#">#95256</a></span>
-                                                        </div>
-                                                        <div class="nk-tb-col tb-col-sm">
-                                                            <div class="user-card">
-                                                                <div class="user-avatar sm bg-purple-dim">
-                                                                    <span>NL</span>
-                                                                </div>
-                                                                <div class="user-name">
-                                                                    <span class="tb-lead">Naomi Lawrence</span>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="nk-tb-col tb-col-md">
-                                                            <span class="tb-sub">01/29/2020</span>
-                                                        </div>
-                                                        <div class="nk-tb-col">
-                                                            <span class="tb-sub tb-amount">1099.99 <span>USD</span></span>
-                                                        </div>
-                                                        <div class="nk-tb-col">
-                                                            <span class="badge badge-dot badge-dot-xs badge-success">Paid</span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="nk-tb-item">
-                                                        <div class="nk-tb-col">
-                                                            <span class="tb-lead"><a href="#">#95135</a></span>
-                                                        </div>
-                                                        <div class="nk-tb-col tb-col-sm">
-                                                            <div class="user-card">
-                                                                <div class="user-avatar sm bg-success-dim">
-                                                                    <span>CH</span>
-                                                                </div>
-                                                                <div class="user-name">
-                                                                    <span class="tb-lead">Cassandra Hogan</span>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="nk-tb-col tb-col-md">
-                                                            <span class="tb-sub">01/29/2020</span>
-                                                        </div>
-                                                        <div class="nk-tb-col">
-                                                            <span class="tb-sub tb-amount">1099.99 <span>USD</span></span>
-                                                        </div>
-                                                        <div class="nk-tb-col">
-                                                            <span class="badge badge-dot badge-dot-xs badge-warning">Due</span>
-                                                        </div>
-                                                    </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div><!-- .nk-tb-item -->
+                                        <div class="nk-tb-item">
+                                            <div class="nk-tb-col nk-tb-col-check">
+                                                <div class="custom-control custom-control-sm custom-checkbox notext">
+                                                    <input type="checkbox" class="custom-control-input" id="uid1">
+                                                    <label class="custom-control-label" for="uid1"></label>
                                                 </div>
-                                            </div><!-- .card -->
+                                            </div>
+                                            <div class="nk-tb-col">
+                                                <span class="tb-lead"><a href="#">#95963</a></span>
+                                            </div>
+                                            <div class="nk-tb-col tb-col-md">
+                                                <span class="tb-sub">May 29, 2020</span>
+                                            </div>
+                                            <div class="nk-tb-col">
+                                                <span class="dot bg-success d-mb-none"></span>
+                                                <span class="badge badge-sm badge-dot has-bg badge-success d-none d-mb-inline-flex">Delivered</span>
+                                            </div>
+                                            <div class="nk-tb-col tb-col-sm">
+                                                <span class="tb-sub">Ashley Lawson</span>
+                                            </div>
+                                            <div class="nk-tb-col tb-col-md">
+                                                <span class="tb-sub text-primary">Black Headphones</span>
+                                            </div>
+                                            <div class="nk-tb-col">
+                                                <span class="tb-lead">$ 149.75</span>
+                                            </div>
+                                            <div class="nk-tb-col nk-tb-col-tools">
+                                                <ul class="nk-tb-actions gx-1">
+                                                    <li class="nk-tb-action-hidden"><a href="#" class="btn btn-icon btn-trigger btn-tooltip" title="Mark as Delivered" data-toggle="dropdown">
+                                                            <em class="icon ni ni-truck"></em></a></li>
+                                                    <li class="nk-tb-action-hidden"><a href="#" class="btn btn-icon btn-trigger btn-tooltip" title="View Order" data-toggle="dropdown">
+                                                            <em class="icon ni ni-eye"></em></a></li>
+                                                    <li>
+                                                    <li>
+                                                        <div class="drodown mr-n1">
+                                                            <a href="#" class="dropdown-toggle btn btn-icon btn-trigger" data-toggle="dropdown"><em class="icon ni ni-more-h"></em></a>
+                                                            <div class="dropdown-menu dropdown-menu-right">
+                                                                <ul class="link-list-opt no-bdr">
+                                                                    <li><a href="#"><em class="icon ni ni-eye"></em><span>Order Details</span></a></li>
+                                                                    <li><a href="#"><em class="icon ni ni-truck"></em><span>Mark as Delivered</span></a></li>
+                                                                    <li><a href="#"><em class="icon ni ni-money"></em><span>Mark as Paid</span></a></li>
+                                                                    <li><a href="#"><em class="icon ni ni-report-profit"></em><span>Send Invoice</span></a></li>
+                                                                    <li><a href="#"><em class="icon ni ni-trash"></em><span>Remove Order</span></a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div><!-- .nk-tb-item -->
+                                        <div class="nk-tb-item">
+                                            <div class="nk-tb-col nk-tb-col-check">
+                                                <div class="custom-control custom-control-sm custom-checkbox notext">
+                                                    <input type="checkbox" class="custom-control-input" id="uid2">
+                                                    <label class="custom-control-label" for="uid2"></label>
+                                                </div>
+                                            </div>
+                                            <div class="nk-tb-col">
+                                                <span class="tb-lead"><a href="#">#95933</a></span>
+                                            </div>
+                                            <div class="nk-tb-col tb-col-md">
+                                                <span class="tb-sub">May 29, 2020</span>
+                                            </div>
+                                            <div class="nk-tb-col">
+                                                <span class="dot bg-success d-mb-none"></span>
+                                                <span class="badge badge-sm badge-dot has-bg badge-success d-none d-mb-inline-flex">Delivered</span>
+                                            </div>
+                                            <div class="nk-tb-col tb-col-sm">
+                                                <span class="tb-sub">Joe Larson</span>
+                                            </div>
+                                            <div class="nk-tb-col tb-col-md">
+                                                <span class="tb-sub text-primary">2 Items</span>
+                                            </div>
+                                            <div class="nk-tb-col">
+                                                <span class="tb-lead">$ 199.49</span>
+                                            </div>
+                                            <div class="nk-tb-col nk-tb-col-tools">
+                                                <ul class="nk-tb-actions gx-1">
+                                                    <li class="nk-tb-action-hidden"><a href="#" class="btn btn-icon btn-trigger btn-tooltip" title="Mark as Delivered" data-toggle="dropdown">
+                                                            <em class="icon ni ni-truck"></em></a></li>
+                                                    <li class="nk-tb-action-hidden"><a href="#" class="btn btn-icon btn-trigger btn-tooltip" title="View Order" data-toggle="dropdown">
+                                                            <em class="icon ni ni-eye"></em></a></li>
+                                                    <li>
+                                                    <li>
+                                                        <div class="drodown mr-n1">
+                                                            <a href="#" class="dropdown-toggle btn btn-icon btn-trigger" data-toggle="dropdown"><em class="icon ni ni-more-h"></em></a>
+                                                            <div class="dropdown-menu dropdown-menu-right">
+                                                                <ul class="link-list-opt no-bdr">
+                                                                    <li><a href="#"><em class="icon ni ni-eye"></em><span>Order Details</span></a></li>
+                                                                    <li><a href="#"><em class="icon ni ni-truck"></em><span>Mark as Delivered</span></a></li>
+                                                                    <li><a href="#"><em class="icon ni ni-money"></em><span>Mark as Paid</span></a></li>
+                                                                    <li><a href="#"><em class="icon ni ni-report-profit"></em><span>Send Invoice</span></a></li>
+                                                                    <li><a href="#"><em class="icon ni ni-trash"></em><span>Remove Order</span></a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div><!-- .nk-tb-item -->
+                                        <div class="nk-tb-item">
+                                            <div class="nk-tb-col nk-tb-col-check">
+                                                <div class="custom-control custom-control-sm custom-checkbox notext">
+                                                    <input type="checkbox" class="custom-control-input" id="uid1">
+                                                    <label class="custom-control-label" for="uid1"></label>
+                                                </div>
+                                            </div>
+                                            <div class="nk-tb-col">
+                                                <span class="tb-lead"><a href="#">#95947</a></span>
+                                            </div>
+                                            <div class="nk-tb-col tb-col-md">
+                                                <span class="tb-sub">May 28, 2020</span>
+                                            </div>
+                                            <div class="nk-tb-col">
+                                                <span class="dot bg-warning d-mb-none"></span>
+                                                <span class="badge badge-sm badge-dot has-bg badge-warning d-none d-mb-inline-flex">On Hold</span>
+                                            </div>
+                                            <div class="nk-tb-col tb-col-sm">
+                                                <span class="tb-sub">Frances Burns</span>
+                                            </div>
+                                            <div class="nk-tb-col tb-col-md">
+                                                <span class="tb-sub text-primary">6 Items</span>
+                                            </div>
+                                            <div class="nk-tb-col">
+                                                <span class="tb-lead">$ 469.75</span>
+                                            </div>
+                                            <div class="nk-tb-col nk-tb-col-tools">
+                                                <ul class="nk-tb-actions gx-1">
+                                                    <li class="nk-tb-action-hidden"><a href="#" class="btn btn-icon btn-trigger btn-tooltip" title="Mark as Delivered" data-toggle="dropdown">
+                                                            <em class="icon ni ni-truck"></em></a></li>
+                                                    <li class="nk-tb-action-hidden"><a href="#" class="btn btn-icon btn-trigger btn-tooltip" title="View Order" data-toggle="dropdown">
+                                                            <em class="icon ni ni-eye"></em></a></li>
+                                                    <li>
+                                                    <li>
+                                                        <div class="drodown mr-n1">
+                                                            <a href="#" class="dropdown-toggle btn btn-icon btn-trigger" data-toggle="dropdown"><em class="icon ni ni-more-h"></em></a>
+                                                            <div class="dropdown-menu dropdown-menu-right">
+                                                                <ul class="link-list-opt no-bdr">
+                                                                    <li><a href="#"><em class="icon ni ni-eye"></em><span>Order Details</span></a></li>
+                                                                    <li><a href="#"><em class="icon ni ni-truck"></em><span>Mark as Delivered</span></a></li>
+                                                                    <li><a href="#"><em class="icon ni ni-money"></em><span>Mark as Paid</span></a></li>
+                                                                    <li><a href="#"><em class="icon ni ni-report-profit"></em><span>Send Invoice</span></a></li>
+                                                                    <li><a href="#"><em class="icon ni ni-trash"></em><span>Remove Order</span></a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div><!-- .nk-tb-item -->
+                                        <div class="nk-tb-item">
+                                            <div class="nk-tb-col nk-tb-col-check">
+                                                <div class="custom-control custom-control-sm custom-checkbox notext">
+                                                    <input type="checkbox" class="custom-control-input" id="uid2">
+                                                    <label class="custom-control-label" for="uid2"></label>
+                                                </div>
+                                            </div>
+                                            <div class="nk-tb-col">
+                                                <span class="tb-lead"><a href="#">#95909</a></span>
+                                            </div>
+                                            <div class="nk-tb-col tb-col-md">
+                                                <span class="tb-sub">May 26, 2020</span>
+                                            </div>
+                                            <div class="nk-tb-col">
+                                                <span class="dot bg-success d-mb-none"></span>
+                                                <span class="badge badge-sm badge-dot has-bg badge-success d-none d-mb-inline-flex">Delivered</span>
+                                            </div>
+                                            <div class="nk-tb-col tb-col-sm">
+                                                <span class="tb-sub">Victoria Lynch</span>
+                                            </div>
+                                            <div class="nk-tb-col tb-col-md">
+                                                <span class="tb-sub text-primary">Waterproof Speaker</span>
+                                            </div>
+                                            <div class="nk-tb-col">
+                                                <span class="tb-lead">$ 99.49</span>
+                                            </div>
+                                            <div class="nk-tb-col nk-tb-col-tools">
+                                                <ul class="nk-tb-actions gx-1">
+                                                    <li class="nk-tb-action-hidden"><a href="#" class="btn btn-icon btn-trigger btn-tooltip" title="Mark as Delivered" data-toggle="dropdown">
+                                                            <em class="icon ni ni-truck"></em></a></li>
+                                                    <li class="nk-tb-action-hidden"><a href="#" class="btn btn-icon btn-trigger btn-tooltip" title="View Order" data-toggle="dropdown">
+                                                            <em class="icon ni ni-eye"></em></a></li>
+                                                    <li>
+                                                    <li>
+                                                        <div class="drodown mr-n1">
+                                                            <a href="#" class="dropdown-toggle btn btn-icon btn-trigger" data-toggle="dropdown"><em class="icon ni ni-more-h"></em></a>
+                                                            <div class="dropdown-menu dropdown-menu-right">
+                                                                <ul class="link-list-opt no-bdr">
+                                                                    <li><a href="#"><em class="icon ni ni-eye"></em><span>Order Details</span></a></li>
+                                                                    <li><a href="#"><em class="icon ni ni-truck"></em><span>Mark as Delivered</span></a></li>
+                                                                    <li><a href="#"><em class="icon ni ni-money"></em><span>Mark as Paid</span></a></li>
+                                                                    <li><a href="#"><em class="icon ni ni-report-profit"></em><span>Send Invoice</span></a></li>
+                                                                    <li><a href="#"><em class="icon ni ni-trash"></em><span>Remove Order</span></a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div><!-- .nk-tb-item -->
+                                        <div class="nk-tb-item">
+                                            <div class="nk-tb-col nk-tb-col-check">
+                                                <div class="custom-control custom-control-sm custom-checkbox notext">
+                                                    <input type="checkbox" class="custom-control-input" id="uid1">
+                                                    <label class="custom-control-label" for="uid1"></label>
+                                                </div>
+                                            </div>
+                                            <div class="nk-tb-col">
+                                                <span class="tb-lead"><a href="#">#95902</a></span>
+                                            </div>
+                                            <div class="nk-tb-col tb-col-md">
+                                                <span class="tb-sub">May 25, 2020</span>
+                                            </div>
+                                            <div class="nk-tb-col">
+                                                <span class="dot bg-warning d-mb-none"></span>
+                                                <span class="badge badge-sm badge-dot has-bg badge-warning d-none d-mb-inline-flex">On Hold</span>
+                                            </div>
+                                            <div class="nk-tb-col tb-col-sm">
+                                                <span class="tb-sub">Patrick Newman</span>
+                                            </div>
+                                            <div class="nk-tb-col tb-col-md">
+                                                <span class="tb-sub text-primary">4 Items</span>
+                                            </div>
+                                            <div class="nk-tb-col">
+                                                <span class="tb-lead">$ 349.75</span>
+                                            </div>
+                                            <div class="nk-tb-col nk-tb-col-tools">
+                                                <ul class="nk-tb-actions gx-1">
+                                                    <li class="nk-tb-action-hidden"><a href="#" class="btn btn-icon btn-trigger btn-tooltip" title="Mark as Delivered" data-toggle="dropdown">
+                                                            <em class="icon ni ni-truck"></em></a></li>
+                                                    <li class="nk-tb-action-hidden"><a href="#" class="btn btn-icon btn-trigger btn-tooltip" title="View Order" data-toggle="dropdown">
+                                                            <em class="icon ni ni-eye"></em></a></li>
+                                                    <li>
+                                                    <li>
+                                                        <div class="drodown mr-n1">
+                                                            <a href="#" class="dropdown-toggle btn btn-icon btn-trigger" data-toggle="dropdown"><em class="icon ni ni-more-h"></em></a>
+                                                            <div class="dropdown-menu dropdown-menu-right">
+                                                                <ul class="link-list-opt no-bdr">
+                                                                    <li><a href="#"><em class="icon ni ni-eye"></em><span>Order Details</span></a></li>
+                                                                    <li><a href="#"><em class="icon ni ni-truck"></em><span>Mark as Delivered</span></a></li>
+                                                                    <li><a href="#"><em class="icon ni ni-money"></em><span>Mark as Paid</span></a></li>
+                                                                    <li><a href="#"><em class="icon ni ni-report-profit"></em><span>Send Invoice</span></a></li>
+                                                                    <li><a href="#"><em class="icon ni ni-trash"></em><span>Remove Order</span></a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div><!-- .nk-tb-item -->
+                                        <div class="nk-tb-item">
+                                            <div class="nk-tb-col nk-tb-col-check">
+                                                <div class="custom-control custom-control-sm custom-checkbox notext">
+                                                    <input type="checkbox" class="custom-control-input" id="uid2">
+                                                    <label class="custom-control-label" for="uid2"></label>
+                                                </div>
+                                            </div>
+                                            <div class="nk-tb-col">
+                                                <span class="tb-lead"><a href="#">#95996</a></span>
+                                            </div>
+                                            <div class="nk-tb-col tb-col-md">
+                                                <span class="tb-sub">May 24, 2020</span>
+                                            </div>
+                                            <div class="nk-tb-col">
+                                                <span class="dot bg-warning d-mb-none"></span>
+                                                <span class="badge badge-sm badge-dot has-bg badge-warning d-none d-mb-inline-flex">On Hold</span>
+                                            </div>
+                                            <div class="nk-tb-col tb-col-sm">
+                                                <span class="tb-sub">Emma Walker</span>
+                                            </div>
+                                            <div class="nk-tb-col tb-col-md">
+                                                <span class="tb-sub text-primary">Smartwatch</span>
+                                            </div>
+                                            <div class="nk-tb-col">
+                                                <span class="tb-lead">$ 129.49</span>
+                                            </div>
+                                            <div class="nk-tb-col nk-tb-col-tools">
+                                                <ul class="nk-tb-actions gx-1">
+                                                    <li class="nk-tb-action-hidden"><a href="#" class="btn btn-icon btn-trigger btn-tooltip" title="Mark as Delivered" data-toggle="dropdown">
+                                                            <em class="icon ni ni-truck"></em></a></li>
+                                                    <li class="nk-tb-action-hidden"><a href="#" class="btn btn-icon btn-trigger btn-tooltip" title="View Order" data-toggle="dropdown">
+                                                            <em class="icon ni ni-eye"></em></a></li>
+                                                    <li>
+                                                    <li>
+                                                        <div class="drodown mr-n1">
+                                                            <a href="#" class="dropdown-toggle btn btn-icon btn-trigger" data-toggle="dropdown"><em class="icon ni ni-more-h"></em></a>
+                                                            <div class="dropdown-menu dropdown-menu-right">
+                                                                <ul class="link-list-opt no-bdr">
+                                                                    <li><a href="#"><em class="icon ni ni-eye"></em><span>Order Details</span></a></li>
+                                                                    <li><a href="#"><em class="icon ni ni-truck"></em><span>Mark as Delivered</span></a></li>
+                                                                    <li><a href="#"><em class="icon ni ni-money"></em><span>Mark as Paid</span></a></li>
+                                                                    <li><a href="#"><em class="icon ni ni-report-profit"></em><span>Send Invoice</span></a></li>
+                                                                    <li><a href="#"><em class="icon ni ni-trash"></em><span>Remove Order</span></a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div><!-- .nk-tb-item -->
+                                        <div class="nk-tb-item">
+                                            <div class="nk-tb-col nk-tb-col-check">
+                                                <div class="custom-control custom-control-sm custom-checkbox notext">
+                                                    <input type="checkbox" class="custom-control-input" id="uid1">
+                                                    <label class="custom-control-label" for="uid1"></label>
+                                                </div>
+                                            </div>
+                                            <div class="nk-tb-col">
+                                                <span class="tb-lead"><a href="#">#95982</a></span>
+                                            </div>
+                                            <div class="nk-tb-col tb-col-md">
+                                                <span class="tb-sub">May 23, 2020</span>
+                                            </div>
+                                            <div class="nk-tb-col">
+                                                <span class="dot bg-success d-mb-none"></span>
+                                                <span class="badge badge-sm badge-dot has-bg badge-success d-none d-mb-inline-flex">Delivered</span>
+                                            </div>
+                                            <div class="nk-tb-col tb-col-sm">
+                                                <span class="tb-sub">Jane Montgomery</span>
+                                            </div>
+                                            <div class="nk-tb-col tb-col-md">
+                                                <span class="tb-sub text-primary">Smartwatch</span>
+                                            </div>
+                                            <div class="nk-tb-col">
+                                                <span class="tb-lead">$ 249.75</span>
+                                            </div>
+                                            <div class="nk-tb-col nk-tb-col-tools">
+                                                <ul class="nk-tb-actions gx-1">
+                                                    <li class="nk-tb-action-hidden"><a href="#" class="btn btn-icon btn-trigger btn-tooltip" title="Mark as Delivered" data-toggle="dropdown">
+                                                            <em class="icon ni ni-truck"></em></a></li>
+                                                    <li class="nk-tb-action-hidden"><a href="#" class="btn btn-icon btn-trigger btn-tooltip" title="View Order" data-toggle="dropdown">
+                                                            <em class="icon ni ni-eye"></em></a></li>
+                                                    <li>
+                                                    <li>
+                                                        <div class="drodown mr-n1">
+                                                            <a href="#" class="dropdown-toggle btn btn-icon btn-trigger" data-toggle="dropdown"><em class="icon ni ni-more-h"></em></a>
+                                                            <div class="dropdown-menu dropdown-menu-right">
+                                                                <ul class="link-list-opt no-bdr">
+                                                                    <li><a href="#"><em class="icon ni ni-eye"></em><span>Order Details</span></a></li>
+                                                                    <li><a href="#"><em class="icon ni ni-truck"></em><span>Mark as Delivered</span></a></li>
+                                                                    <li><a href="#"><em class="icon ni ni-money"></em><span>Mark as Paid</span></a></li>
+                                                                    <li><a href="#"><em class="icon ni ni-report-profit"></em><span>Send Invoice</span></a></li>
+                                                                    <li><a href="#"><em class="icon ni ni-trash"></em><span>Remove Order</span></a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div><!-- .nk-tb-item -->
+                                        <div class="nk-tb-item">
+                                            <div class="nk-tb-col nk-tb-col-check">
+                                                <div class="custom-control custom-control-sm custom-checkbox notext">
+                                                    <input type="checkbox" class="custom-control-input" id="uid2">
+                                                    <label class="custom-control-label" for="uid2"></label>
+                                                </div>
+                                            </div>
+                                            <div class="nk-tb-col">
+                                                <span class="tb-lead"><a href="#">#95959</a></span>
+                                            </div>
+                                            <div class="nk-tb-col tb-col-md">
+                                                <span class="tb-sub">May 23, 2020</span>
+                                            </div>
+                                            <div class="nk-tb-col">
+                                                <span class="dot bg-success d-mb-none"></span>
+                                                <span class="badge badge-sm badge-dot has-bg badge-success d-none d-mb-inline-flex">Delivered</span>
+                                            </div>
+                                            <div class="nk-tb-col tb-col-sm">
+                                                <span class="tb-sub">Jane Harris</span>
+                                            </div>
+                                            <div class="nk-tb-col tb-col-md">
+                                                <span class="tb-sub text-primary">Waterproof Speaker</span>
+                                            </div>
+                                            <div class="nk-tb-col">
+                                                <span class="tb-lead">$ 99.49</span>
+                                            </div>
+                                            <div class="nk-tb-col nk-tb-col-tools">
+                                                <ul class="nk-tb-actions gx-1">
+                                                    <li class="nk-tb-action-hidden"><a href="#" class="btn btn-icon btn-trigger btn-tooltip" title="Mark as Delivered" data-toggle="dropdown">
+                                                            <em class="icon ni ni-truck"></em></a></li>
+                                                    <li class="nk-tb-action-hidden"><a href="#" class="btn btn-icon btn-trigger btn-tooltip" title="View Order" data-toggle="dropdown">
+                                                            <em class="icon ni ni-eye"></em></a></li>
+                                                    <li>
+                                                    <li>
+                                                        <div class="drodown mr-n1">
+                                                            <a href="#" class="dropdown-toggle btn btn-icon btn-trigger" data-toggle="dropdown"><em class="icon ni ni-more-h"></em></a>
+                                                            <div class="dropdown-menu dropdown-menu-right">
+                                                                <ul class="link-list-opt no-bdr">
+                                                                    <li><a href="#"><em class="icon ni ni-eye"></em><span>Order Details</span></a></li>
+                                                                    <li><a href="#"><em class="icon ni ni-truck"></em><span>Mark as Delivered</span></a></li>
+                                                                    <li><a href="#"><em class="icon ni ni-money"></em><span>Mark as Paid</span></a></li>
+                                                                    <li><a href="#"><em class="icon ni ni-report-profit"></em><span>Send Invoice</span></a></li>
+                                                                    <li><a href="#"><em class="icon ni ni-trash"></em><span>Remove Order</span></a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div><!-- .nk-tb-item -->
+                                    </div><!-- .nk-tb-list -->
+                                    <div class="card">
+                                        <div class="card-inner">
+                                            <div class="nk-block-between-md g-3">
+                                                <div class="g">
+                                                    <ul class="pagination justify-content-center justify-content-md-start">
+                                                        <li class="page-item"><a class="page-link" href="#"><em class="icon ni ni-chevrons-left"></em></a></li>
+                                                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                                        <li class="page-item"><span class="page-link"><em class="icon ni ni-more-h"></em></span></li>
+                                                        <li class="page-item"><a class="page-link" href="#">6</a></li>
+                                                        <li class="page-item"><a class="page-link" href="#">7</a></li>
+                                                        <li class="page-item"><a class="page-link" href="#"><em class="icon ni ni-chevrons-right"></em></a></li>
+                                                    </ul><!-- .pagination -->
+                                                </div>
+                                                <div class="g">
+                                                    <div class="pagination-goto d-flex justify-content-center justify-content-md-start gx-3">
+                                                        <div>Page</div>
+                                                        <div>
+                                                            <select class="form-select form-select-sm" data-search="on" data-dropdown="xs center">
+                                                                <option value="page-1">1</option>
+                                                                <option value="page-2">2</option>
+                                                                <option value="page-4">4</option>
+                                                                <option value="page-5">5</option>
+                                                                <option value="page-6">6</option>
+                                                                <option value="page-7">7</option>
+                                                                <option value="page-8">8</option>
+                                                                <option value="page-9">9</option>
+                                                                <option value="page-10">10</option>
+                                                                <option value="page-11">11</option>
+                                                                <option value="page-12">12</option>
+                                                                <option value="page-13">13</option>
+                                                                <option value="page-14">14</option>
+                                                                <option value="page-15">15</option>
+                                                                <option value="page-16">16</option>
+                                                                <option value="page-17">17</option>
+                                                                <option value="page-18">18</option>
+                                                                <option value="page-19">19</option>
+                                                                <option value="page-20">20</option>
+                                                            </select>
+                                                        </div>
+                                                        <div>OF 102</div>
+                                                    </div>
+                                                </div><!-- .pagination-goto -->
+                                            </div><!-- .nk-block-between -->
                                         </div>
-                                        <div class="col-xxl-4 col-md-8 col-lg-6">
-                                            <div class="card h-100">
-                                                <div class="card-inner">
-                                                    <div class="card-title-group mb-2">
-                                                        <div class="card-title">
-                                                            <h6 class="title">Top products</h6>
-                                                        </div>
-                                                        <div class="card-tools">
-                                                            <div class="dropdown">
-                                                                <a href="#" class="dropdown-toggle link link-light link-sm dropdown-indicator" data-toggle="dropdown">Weekly</a>
-                                                                <div class="dropdown-menu dropdown-menu-sm dropdown-menu-right">
-                                                                    <ul class="link-list-opt no-bdr">
-                                                                        <li><a href="#"><span>Daily</span></a></li>
-                                                                        <li><a href="#" class="active"><span>Weekly</span></a></li>
-                                                                        <li><a href="#"><span>Monthly</span></a></li>
-                                                                    </ul>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <ul class="nk-top-products">
-                                                        <li class="item">
-                                                            <div class="thumb">
-                                                                <img src="./images/product/a.png" alt="">
-                                                            </div>
-                                                            <div class="info">
-                                                                <div class="title">Pink Fitness Tracker</div>
-                                                                <div class="price">$99.00</div>
-                                                            </div>
-                                                            <div class="total">
-                                                                <div class="amount">$990.00</div>
-                                                                <div class="count">10 Sold</div>
-                                                            </div>
-                                                        </li>
-                                                        <li class="item">
-                                                            <div class="thumb">
-                                                                <img src="./images/product/b.png" alt="">
-                                                            </div>
-                                                            <div class="info">
-                                                                <div class="title">Purple Smartwatch</div>
-                                                                <div class="price">$99.00</div>
-                                                            </div>
-                                                            <div class="total">
-                                                                <div class="amount">$990.00</div>
-                                                                <div class="count">10 Sold</div>
-                                                            </div>
-                                                        </li>
-                                                        <li class="item">
-                                                            <div class="thumb">
-                                                                <img src="./images/product/c.png" alt="">
-                                                            </div>
-                                                            <div class="info">
-                                                                <div class="title">Black Mi Band Smartwatch</div>
-                                                                <div class="price">$99.00</div>
-                                                            </div>
-                                                            <div class="total">
-                                                                <div class="amount">$990.00</div>
-                                                                <div class="count">10 Sold</div>
-                                                            </div>
-                                                        </li>
-                                                        <li class="item">
-                                                            <div class="thumb">
-                                                                <img src="./images/product/d.png" alt="">
-                                                            </div>
-                                                            <div class="info">
-                                                                <div class="title">Black Headphones</div>
-                                                                <div class="price">$99.00</div>
-                                                            </div>
-                                                            <div class="total">
-                                                                <div class="amount">$990.00</div>
-                                                                <div class="count">10 Sold</div>
-                                                            </div>
-                                                        </li>
-                                                        <li class="item">
-                                                            <div class="thumb">
-                                                                <img src="./images/product/e.png" alt="">
-                                                            </div>
-                                                            <div class="info">
-                                                                <div class="title">iPhone 7 Headphones</div>
-                                                                <div class="price">$99.00</div>
-                                                            </div>
-                                                            <div class="total">
-                                                                <div class="amount">$990.00</div>
-                                                                <div class="count">10 Sold</div>
-                                                            </div>
-                                                        </li>
-                                                    </ul>
-                                                </div><!-- .card-inner -->
-                                            </div><!-- .card -->
-                                        </div><!-- .col -->
-                                    </div><!-- .row -->
+                                    </div>
                                 </div><!-- .nk-block -->
                             </div>
                         </div>
@@ -1187,10 +1334,111 @@
         <!-- main @e -->
     </div>
     <!-- app-root @e -->
+    <!-- Modal Default -->
+    <div class="modal fade" tabindex="-1" id="tranxDetails">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <a href="#" class="close" data-dismiss="modal" aria-label="Close">
+                    <em class="icon ni ni-cross"></em>
+                </a>
+                <div class="modal-body modal-body-md">
+                    <div class="nk-modal-head mb-3 mb-sm-5">
+                        <h4 class="nk-modal-title title">Transaction <small class="text-primary">#TNX67234</small></h4>
+                    </div>
+                    <div class="nk-tnx-details">
+                        <div class="nk-block-between flex-wrap g-3">
+                            <div class="nk-tnx-type">
+                                <div class="nk-tnx-type-icon bg-warning text-white">
+                                    <em class="icon ni ni-arrow-up-right"></em>
+                                </div>
+                                <div class="nk-tnx-type-text">
+                                    <h5 class="title">+ 0.004560 BTC</h5>
+                                    <span class="sub-text mt-n1">15 Oct, 2019 09:45 PM</span>
+                                </div>
+                            </div>
+                            <ul class="align-center flex-wrap gx-3">
+                                <li>
+                                    <span class="badge badge-sm badge-success">Completed</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="nk-modal-head mt-sm-5 mt-4 mb-4">
+                            <h5 class="title">Transaction Info</h5>
+                        </div>
+                        <div class="row gy-3">
+                            <div class="col-lg-6">
+                                <span class="sub-text">Order ID</span>
+                                <span class="caption-text">YWLX52JG73</span>
+                            </div>
+                            <div class="col-lg-6">
+                                <span class="sub-text">Reference ID</span>
+                                <span class="caption-text text-break">NIY9TB2JG73YWLXPYM2U8HR</span>
+                            </div>
+                            <div class="col-lg-6">
+                                <span class="sub-text">Transaction Fee</span>
+                                <span class="caption-text">0.000002 BTC</span>
+                            </div>
+                            <div class="col-lg-6">
+                                <span class="sub-text">Amount</span>
+                                <span class="caption-text">0.004560 BTC</span>
+                            </div>
+                        </div><!-- .row -->
+                        <div class="nk-modal-head mt-sm-5 mt-4 mb-4">
+                            <h5 class="title">Transaction Details</h5>
+                        </div>
+                        <div class="row gy-3">
+                            <div class="col-lg-6">
+                                <span class="sub-text">Transaction Type</span>
+                                <span class="caption-text">Deposit</span>
+                            </div>
+                            <div class="col-lg-6">
+                                <span class="sub-text">Payment Gateway</span>
+                                <span class="caption-text align-center">CoinPayments <span class="badge badge-primary ml-2 text-white">Online Gateway</span></span>
+                            </div>
+                            <div class="col-lg-6">
+                                <span class="sub-text">Payment From</span>
+                                <span class="caption-text text-break">1xA058106537340385c87d264f93</span>
+                            </div>
+                            <div class="col-lg-6">
+                                <span class="sub-text">Payment To</span>
+                                <span class="caption-text text-break">1x0385c87d264A05810653734f93</span>
+                            </div>
+                            <div class="col-lg-12">
+                                <span class="sub-text">Transaction Hash</span>
+                                <span class="caption-text text-break">Tx156d3342d5c87d264f9359200xa058106537340385c87d264f93</span>
+                            </div>
+                            <div class="col-lg-12">
+                                <span class="sub-text">Details</span>
+                                <span class="caption-text">Deposit Fund for Investment</span>
+                            </div>
+                        </div><!-- .row -->
+                    </div><!-- .nk-tnx-details -->
+                </div><!-- .modal-body -->
+            </div><!-- .modal-content -->
+        </div><!-- .modal-dialog -->
+    </div><!-- .modal -->
+    <!-- Modal Default -->
+    <div class="modal fade" tabindex="-1" id="savedFilter">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Modal Title</h5>
+                    <a href="#" class="close" data-dismiss="modal" aria-label="Close">
+                        <em class="icon ni ni-cross"></em>
+                    </a>
+                </div>
+                <div class="modal-body">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem similique earum necessitatibus nesciunt! Quia id expedita asperiores voluptatem odit quis fugit sapiente assumenda sunt voluptatibus atque facere autem, omnis explicabo.</p>
+                </div>
+                <div class="modal-footer bg-light">
+                    <span class="sub-text">Modal Footer Text</span>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- JavaScript -->
     <script src="./assets/js/bundle.js?ver=1.9.2"></script>
     <script src="./assets/js/scripts.js?ver=1.9.2"></script>
-    <script src="./assets/js/charts/chart-ecommerce.js?ver=1.9.2"></script>
 </body>
 
 </html>
