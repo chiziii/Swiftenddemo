@@ -35,7 +35,7 @@
                 <div class="nk-content ">
                     <div class="nk-block nk-block-middle nk-auth-body  wide-xs">
                         <div class="brand-logo pb-4 text-center">
-                            <a href="html/index.html" class="logo-link">
+                            <a href="index.html" class="logo-link">
                                 <img class="logo-light logo-img logo-img-lg" src="./images/logo.png"
                                     srcset="./images/logo2x.png 2x" alt="logo">
                                 <img class="logo-dark logo-img logo-img-lg" src="./images/logo-dark.png"
@@ -52,7 +52,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <form action="html/dashboard.html" @submit.prevent="handleSubmit">
+                                <form action="dashboard.html" @submit.prevent="handleSubmit">
                                     <div class="form-group">
                                         <div class="form-label-group">
                                             <label class="form-label" for="default-01">Email address</label>
@@ -63,7 +63,7 @@
                                     <div class="form-group">
                                         <div class="form-label-group">
                                             <label class="form-label" for="password">Password</label>
-                                            <a class="link link-primary link-sm" href="./html/forgot.html">Forgot
+                                            <a class="link link-primary link-sm" href="./forgot.html">Forgot
                                                 password?</a>
                                         </div>
                                         <div class="form-control-wrap">
@@ -85,7 +85,7 @@
                                         <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
                                     </div>
                                 </form>
-                                <div class="form-note-s2 text-center pt-4"><a href="./html/register.html">Create an
+                                <div class="form-note-s2 text-center pt-4"><a href="./register.html">Create an
                                         account</a>
                                 </div>
 
@@ -150,7 +150,7 @@
                         });
                         
                         localStorage.setItem('token', response.data.token)
-                        window.location.replace("./html/overview.html");
+                        window.location.replace("./overview.html");
 
                     } catch {
                         this.errors = [];
