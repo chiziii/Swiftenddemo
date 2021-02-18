@@ -76,6 +76,11 @@
                                                 v-model="password" placeholder="Enter your passcode" required>
                                         </div>
                                     </div>
+                                    <p>
+                                        <ul>
+                                          <li v-for="error in errors">{{ error }}</li>
+                                        </ul>
+                                      </p>
                                     <div class="form-group">
                                         <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
                                     </div>
@@ -131,6 +136,7 @@
             data() {
                 
                 return {
+                    errors: [],
                     email: '',
                     password: '',
                 }
@@ -142,11 +148,14 @@
                             email: this.email,
                             password: this.password,
                         });
-
+                        
                         localStorage.setItem('token', response.data.token)
                         window.location.replace("./html/overview.html");
-                    } catch (error) {
+
+                    } catch {
+                        this.errors = [];
                         console.log('try catch');
+                        this.errors.push('Name required.');
                         alert("Incorrect Credentails !")
                         console.log(error);
                     }
